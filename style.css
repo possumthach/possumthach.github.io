@@ -55,3 +55,42 @@ body {
   width: auto;
   padding: 8px;
 }
+
+.column-left {
+  border: 2px solid #fff;
+  display: inline-block;
+  float: left;
+  width: 48%;
+  padding: 8px;
+  height: 100%;
+}
+
+.column-right {
+  border: 2px solid #fff;
+  display: inline-block;
+  float: right;
+  width: 48%;
+  padding: 8px;
+  height: 100%;
+}
+
+.about-container{
+  height: 200px;
+  margin-bottom: 21px;
+}
+
+.about-page-foot {
+  border: 2px solid #fff;
+  width: auto;
+  padding: 8px;
+  display: block;
+  text-align: center;
+}
+
+a {
+  color: #ff0;
+}
+
+a:hover {
+  color: #00f;
+}
