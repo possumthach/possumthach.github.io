@@ -12,7 +12,7 @@
 <script src="script.js"></script>
 </head>
 <body>
-  <script src="script.js"></script><button type="button" class="collapse darkable" style="font-family:Play,sans-serif">alphaMirror <span style="font-size:24px;" id="collapse-arrow">▼</span></button>
+<button type="button" class="collapse darkable" style="font-family:Play,sans-serif">alphaMirror <span style="font-size:24px;" id="collapse-arrow">▼</span></button>
 <div class="content darkable">
   <br/>
   <div>
@@ -1925,7 +1925,23 @@ system:</span> <i>The chat has been paused.</i>
     <br>
     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />
     this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="font-weight:normal;" class="darkable">creative commons attribution-noncommercial-sharealike 4.0 international license</a>, but don't ask me what that actually means. i just clicked the buttons on their website and copied the little box.</div>
-  
-  
+ <script> 
+var coll = document.getElementsByClassName("collapse");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+      document.getElementById("collapse-arrow").innerHTML = "▼";
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      document.getElementById("collapse-arrow").innerHTML = "▲";
+    }
+  });
+}
+</script>
 </body>
 </html>

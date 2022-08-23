@@ -8,7 +8,7 @@ var coll = document.getElementsByClassName("collapse");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-  document.getElementsByClassName("collapse").addEventListener("click", function() {
+  coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.maxHeight){
