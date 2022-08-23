@@ -1,0 +1,1930 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<META charset="UTF-8">
+<title>alphaMirror 1.1</title>
+<link rel="stylesheet" type="text/css" href="alfm-style.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet"> 
+<script src="https://kit.fontawesome.com/29d67d4b62.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+  <button type="button" class="collapse darkable" style="font-family:Play,sans-serif">alphaMirror <span style="font-size:24px;" id="collapse-arrow">▼</span></button>
+<div class="content darkable">
+  <br/>
+  <div>
+    <button onclick="toggleDark()">◇ / ◈</button> // <!-- <button onclick="toggleOnline()">toggle "users online" box</button>  // --> <a href="https://fuckingbirds.org" class="darkable">back to home</a> // <a href="/alphamirror#Chapters" class="darkable">chapter index</a>
+  </div>
+  <br/>
+</div> 
+<!-- <div class="users-online darkable">
+    <span class="users-online-header">users online:</span> <span class="users-online-counter">4</span>
+    <ul class="online" id="online-tracker">
+      <li id="fishnczips"><span style="color:#1da346;font-size:20px">●</span> fishnczips</li>
+      <li id="markasinmark"><span style="color:#1da346;font-size:20px">●</span> markasinmark</li>
+      <li id="sandwidthesda"><span style="color:#1da346;font-size:20px">●</span> sandwidthesda</li>
+      <li id="torris_sirrot"><span style="color:#1da346;font-size:20px">●</span> torris_sirrot</li>
+      <li id="uu0"><span style="color:#1da346;font-size:20px">●</span> uu0</li>
+      <li class="who_shot_marina"><span style="color:#1da346;font-size:20px">●</span> who_shot_marina</li>
+
+    </ul>
+  </div>  --> 
+  <div class="story-box darkable" id="story">
+    <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> so uh. is anyone else literally unable to log out or close the app? or am i just broken?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:34:32 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> Yeah, I'm stuck too. Annoying as hell. Can't even turn my computer off, guess I'll have to wait for the battery to die.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:35:07 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> Sucks that it's so efficient. I'm gonna be here for like six hours. Not to flex or anything though.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:35:40 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> ur using a laptop? just take the battery out
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:35:55 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> I'm not going to fuck with that lithium ion stuff. Don't these things have a tendency to, you know, explode?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:36:42 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> not if u know what ur doing
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:37:00 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> Well, I don't.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:37:31 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> i'll just unplug mine from the wall then. hate to do it though cause i had some unsaved editing i was working on in the background >_>
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:37:49 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">torris_sirrot:</span> **DO NOT UNPLUG YOUR COMPUTER**
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:38:02 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> what
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:38:08 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">torris_sirrot:</span> Hold on am typing long message. DONT UNPLUG IT
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:38:18 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">uu0:</span> this is some creepypasta shit
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:38:25 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> @uu0 stop being so genre savvy
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:38:25 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+     <div class="message darkable"><span style="font-weight:bold;">torris_sirrot:</span> I am here IRL with @lazyeyes99. She turned off the outlet strip that all her wifi and computer stuff is on in order to force restart it. When she turned the computer back on everything was wiped. Factory default. Shes freaking out because she had important work stuff on there.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:39:03 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> are u fucking serious
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:39:09 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">torris_sirrot:</span> Yes. I am on laptop as well and plugged into a battery brick. Dont have my normal wall charger so I am going to have to jerry rig charging & swapping between two bricks to keep this thing alive until this is resolved. Hopefully soon.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:39:40 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">uu0:</span> what the hell kind of setup is that?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:39:45 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">uu0:</span> why would you go over to someones house and not bring a normal charger
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:39:50 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">torris_sirrot:</span> Shitty old laptop full of mods to keep it alive. Basically ship of theseus. Doesnt hold a charge well so I use battery bricks so I'm not tethered to the wall. Cant replace it because it has some specialized software I need.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:40:22 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> Quietly plugging mine back in...
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:40:25 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> So we're stuck here until admin decides to let us go? Awesome. Fuck explaining this to my 70-year-old manager, time to cash in a sick day.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:40:34 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> u cant just leave ur computer on and go to work?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:40:41 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> @sandwidthesda I have to babysit the computer because my jackass roommate will turn it off. This apartment has all the outlets tied to light switches and he can't be bothered to turn lamps on/off individually so he just hits the switch whenever he enters or leaves a room.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:41:00 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> Plus I didn't want to go to work anyway.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:41:04 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">uu0:</span> think im gonna let mine die :shrug: backed everything up to an 8tb hard drive like two weeks ago. nothing i couldnt replace anyway.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:41:10 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">torris_sirrot:</span> Be careful.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:41:14 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">uu0:</span> aye aye captain
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:41:17 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">lazyeyes99:</span> Hey guys
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:41:22 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div>
+    </div>
+    <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> Why the hell would you log back on if you already sacrificed your computer to escape??
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:41:30 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">lazyeyes99:</span> Nothing left to lose B)
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:41:36 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">lazyeyes99:</span> and I wanted to dig around in settings to see if I can find a way to get us out. Torris wouldnt let me do it on his account
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:41:42 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+        </div></div>
+     <div class="message darkable"><span style="font-weight:bold;">lazyeyes99:</span> My computer wasn't totally wiped BTW it still had alphamirror on the desktop and an empty alfm downloads folder
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:41:42 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+        </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">torris_sirrot:</span> Account sharing is against TOS.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:41:49 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> I, for one, would gladly take a ban if it meant it would kick me out of this fucking app.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:42:01 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> @staff @alpha ****** ****** ******** I fucked your **** mother ****** ****** ****** **** pussy cock whore ***** my password is ************** kill yourself *******
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:42:14 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> dude.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:42:16 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> Hahaha, it actually bleeps out your password. Not even bait.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:42:21 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> <i>message removed</i>
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:42:28 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">uu0:</span> holy shit
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:42:30 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> That was only on my screen for like a second but yeah. Holy shit.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:42:34 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> something is wrong with u @markasinmark
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:42:35 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> They didn't even ban me. Just deleted the message. What the fuck.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:42:35 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> @staff I'm begging you, just take me out. Take the fucking shot. Put me out of my misery.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:42:39 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> <i>message removed</i>
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:42:44 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> you're deranged for even being able to think of saying that. what the absolute shit.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:42:48 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">lazyeyes99:</span> Delete account button is broken. Just gives an empty popup box with "OK" and clicking it changes nothing
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:42:50 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">uu0:</span> mods have been taken over by fbi we are all fucked
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:42:54 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> Maybe YOU'RE fucked, but I was just on this app to download obscure Japanese country music no one cares enough to enforce copyright on.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:43:00 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> @staff ban @uu0 for fud
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:43:03 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">uu0:</span> yes please
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:43:05 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">uu0:</span> let me out
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:43:06 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> Jackass roommate finally woke up. He wants to use my computer to file taxes or something he can't do on his phone. Just told him I'm busy and to fuck off, but this might pose a problem in the near future.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:43:10 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">uu0:</span> let him on so mods can ban you for account sharing
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:43:13 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>        
+      <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> I would rather die for real than let this meathead see my downloads folder.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:43:18 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> Since the banhammer is apparently out of commission, you should probably behave yourself, or else admin will just mute you and let you suffer here in silence.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:43:26 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> Oh god. I have no mouth and I must scream.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:43:31 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+      <div class="message darkable"><span style="font-weight:bold;">lazyeyes99:</span> If I plug a USB thumbdrive into my computer I can hear it make the activation sound in the background. Theoretically could I load some kind of program that automatically crashes me back into safety mode or something?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:43:32 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div> 
+      <div class="message darkable"><span style="font-weight:bold;">uu0:</span> yeah probably but theres no guarantee that wouldnt also end up wiping your computer
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:43:53 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+    <div class="message darkable"><span style="font-weight:bold;">uu0:</span> i think basically we all just got long con ransomwared but at least our captors are nice enough to keep the chat on so we can whine about it
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:44:01 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+    <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> is everybody seriously convinced the mods have turned on us and this isn't just a weird glitch?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:44:10 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+    <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> what kind of glitch locks all ur users into the app and wipes their computer if they try turning it off and on again
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:44:18 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+    <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> what kind of ransomware doesn't even give you an option to send them money?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:44:24 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+    <div class="message darkable"><span style="font-weight:bold;">uu0:</span> the really shitty kind
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:44:27 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+    <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> I'm seriously considering just going back to bed now if I can't spend my day off on the computer. God.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:44:29 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+    <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> I am so jealous of you @fishnczips
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:44:36 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+    <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> hey uh
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:44:40 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	<div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> did anyone else just automatically start downloading a really fucking big file
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:44:43 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	<div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> woah what the fuck? yeah i'm apparently downloading "gestalt.czip"
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:44:52 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	<div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> 1038 hours remaining???
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:44:55 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> Same here. Mine's 1231 hours.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:44:59 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> 994 here
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:45:03 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> can't hit cancel download on it. obviously.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:45:05 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> Hahahaha. If we weren't already fucked enough, this thing is going to kill all of our computers on impact. I feel like I'm watching an asteroid coming down on me in super slow mo.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:45:08 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> 242 terabytes.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:45:09 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> how the FUCK is this even possible
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:45:12 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">torris_sirrot:</span> Surprised my laptop didnt just give up and die as soon as it saw that. Fan is roaring like crazy though and the CPU could probably boil water right now.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:45:19 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">romeeeo:</span> Just logged on, what the fuck is happening?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:45:21 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> Welcome to purgatory.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:45:24 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> nobody knows
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:45:24 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">romeeeo:</span> I'm skimming through the backlog right now. This is insane. We're really trapped here?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:45:33 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> seems like it.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:45:35 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">romeeeo:</span> I'm going to call my friend and warn him not to come on. Jesus. What a nightmare.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:45:40 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">romeeeo:</span> But hey, we might get to be on the news or something in the end!
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:45:44 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> yeah dark web nerd news maybe
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:45:47 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> imagine explaining this to some poor normie journalist
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:45:50 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> "so i was on this filesharing site full of totally illegal bullshit..."
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:45:54 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> What in God's name are you people downloading?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:46:01 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> Gay porn, mostly.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:46:03 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> hey, at least the mods here won't let you host any *really* heinous shit, unlike some places *coughzsyscough*
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:46:10 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> yeah man i thought we were supposed to be like noble thieves fighting against oppressive copyright laws and sharing lost media
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:46:11 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> fuck zsys for real
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:46:12 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> Fuck zsys.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:46:13 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> amen fuck zsys
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:46:13 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">romeeeo:</span> So uh, my phone calls aren't going through.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:46:18 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> You sure it's something weird and not just bad service?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:46:25 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">romeeeo:</span> Yeah. I have great reception, 5G, fiber, etc. and nothing is getting out, not even 911.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:46:32 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> hahahaaahaaaaaaaaaa we are so fucked
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:46:37 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> anyone here have smarthome shit hooked up to wifi? id turn that off now if i were you
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:46:40 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> Could you try going outside and catching a neighbor's signal maybe?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:46:43 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">romeeeo:</span> Sure. Brb
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:46:44 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> My text to my manager went through fine. I sent it before gestalt.czip started downloading, though.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:46:49 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> my one security camera that's on wifi isn't loading.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:46:52 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> why would you even have wifi security cameras dude you know that shit is tapped
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:46:57 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> chill, it's only on my front porch because someone stole some of my packages last month. doesn't show the inside of my house at all. and they don't sell ones that record to tape at best buy anymore.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:47:05 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> man i knew my brain was fucked but i didnt expect to get terminally understimulated this quickly lmao
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:47:07 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> like 15 minutes without unlimited internet access and i had to dig around my bedroom to put a cd on just so i didnt start clawing out my own eyeballs. i love adhd
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:47:11 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> what cd is it
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:47:13 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> fashion nugget
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:47:15 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> nice
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:47:16 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">romeeeo:</span> Went and stood on my patio table trying to get as close to the neighbor's house as I could, no luck. Saw a cool bird though. Phone's camera still works!
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:47:20 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> I wish I still had my CDs. Left most of them at my parents' house when I moved out and the three I have left are in my glovebox.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:47:24 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> Wait, that was a lie. I have one from some shitty local folk band that they were handing out for free outside the mall. No CD player though.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:47:29 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> the fuck do you live that still has a mall
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:47:32 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> The glorious American midwest, of course.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:47:34 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">companion_12:</span> What the hell is going on here
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:47:37 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">romeeeo:</span> Oh my God. Hi Rob. I was literally just trying to call you to tell you not to log on today.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:47:40 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> lol
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:47:41 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">companion_12:</span> Wtf is gestalt? is this like an arg or something
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:47:45 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> nope, this is real life, apparently.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:47:49 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> go read past messages
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:47:51 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">companion_12:</span> If you say so
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:47:57 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> I wish someone would go to the fucking library or something and at least post about this on the subreddit.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:01 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> whered torris and their friend go? i thought they were gonna be the A team here
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:08 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">lazyeyes99:</span> Im still here. Torris went out to get food and see if he can get phone service outside
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:12 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> thank u for ur service
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:14 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> literally
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:15 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> just heard my laptop make the low battery sound
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:17 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> of course i cant get the toolbar open to actually check how many minutes it has left but considering its still trying to download gestalt.czip probably not long lmao
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:22 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> so if i suddenly go dark yall know what happened. tell my story
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:26 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> o7
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:28 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> 07
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:28 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> what is o7
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:29 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> guy saluting emote, the 7 is the arm
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:31 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> ohhhh i see. thanks o7
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:33 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> We're like WWI soldiers in the trenches, dying in each other's arms. o7
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:34 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">companion_12:</span> This is insane
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:39 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">companion_12:</span> Trying to decide if I should just turn my computer off too. I backed up like a month ago but I have some important stuff downloaded since then
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:43 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> yeah i really dont wanna lose all my shit but a thousand hours is like a month or something right
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:47 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> assuming theyll let us out once this fucking thermonuclear zip bomb downloads that is
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:50 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> maybe its not even a zip bomb maybe its the tool to upload our consciousness into the cloud or whatever
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:52 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">companion_12:</span> Wait it's really telling you 1000 hours to download gestalt.czip? Mine says 2 hours 32 minutes
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:48:58 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> what the hell
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:00 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> How big is the file?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:03 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">companion_12:</span> 540 mb
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:05 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> uh. the rest of us are seeing 242 terabytes.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:09 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">companion_12:</span> Nope mine is 540 mb exactly
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:12 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> the plot thickens
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:13 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> Nobody else has a vastly smaller filesize, right? Or vastly larger, for that matter?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:15 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> I'm still 242.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:16 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> 242 tb
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:16 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> ^ same
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:17 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> yeah still 242 for me
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:17 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">romeeeo:</span> Mine actually just ticked down to 241.99 tb. Dunno what happened there. Rounding quirk maybe. Functionally 242.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:17 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">lazyeyes99:</span> Yep I'm also 242 and so was Torris
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:18 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">companion_12:</span> Wtf why am I special
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:20 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> now im tempted to plug my computer back in and see what happens in 2 hours and 31 minutes
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:22 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">companion_12:</span> And what does gestalt even mean exactly
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:22 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> its like, something thats greater than the sum of its parts? or uhhh
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:24 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> you ever see a flock of swallows or something moving like one big blob instead of a thousand little birds? its like that
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:27 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">companion_12:</span> Is it a noun or an adjective
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:29 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> both i think
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:29 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> doesn't it have something to do with psychology?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:32 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> anyone have a paper dictionary laying around lmao
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:34 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> Gestalt psychology is some shit about how we perceive things as whole objects and not collections of parts. Like how we see "a bike" and not a metal frame and two wheels and pedals and a chain and so on.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:37 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> Assuming the one semester of psych I took five years ago wasn't lying to me, that is.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:39 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> Then all computer files are gestalt, right? Because we see them as "files" and not strings of ones and zeros?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:42 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> i seriously cant decide if i should let my laptop die or not
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">7:49:43 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> can someone flip a coin and post the result exactly when the minute ticks over
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:44 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> ill send my bet at the same time so i cant psych myself out of it
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:45 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> i have one standard united states quarter locked and loaded.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:47 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> thanks
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:49 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> I think the definition of "gestalt" is a little pickier than that, like the individual parts must still be discernible within the whole or something, otherwise everything in the universe is a gestalt of atoms. Which maybe it is, I don't fucking know, but I've never heard anyone say that.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:55 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> here we go
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:49:58 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> heads
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:00 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> heads i let it die tails i plug it in
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:00 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> welp
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:01 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> o7
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:02 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> The name "gestalt" has to mean something about this particular czip though, right? Like maybe the file appears super large to most of our computers but is actually 540 megabytes' worth of small parts?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:04 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">romeeeo:</span> RIP @uu0, they will be missed.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:05 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">romeeeo:</span> o7
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:05 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> if anything interesting happens when @companion_12's file finishes downloading someone post about it on the subreddit pls
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:06 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> i'm sure this whole shitshow will be getting a thorough writeup.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:08 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> im already working on my memoir
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:10 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> im calling it "RANSOMED: an alphamirror survivor's tale"
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:11 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> anyone wanna call dibs on the film rights
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:13 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">uu0:</span> no thanks but put my name on the dedication page
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:14 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> Roommate started bothering me again, I just told him my computer got a virus and I have to hack in and remove it. He believed it and went to his girlfriend's house to use her computer. Not sure how long I can keep this up though, his stupidity must have a limit somewhere.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:19 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">companion_12:</span> My download estimate just dropped to like 15 minutes
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:20 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> is it still 540 mb?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:21 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">companion_12:</span> Yep
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:21 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">companion_12:</span> Seems to have settled on 13 minutes 45 seconds and counting
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:22 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> @uu0 u still here?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:23 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> their name just dropped off the online list...
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:24 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> o7
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:24 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> o7
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:24 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> o fucking 7.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:25 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">lazyeyes99:</span> Torris is back I hear him unlocking the front door :) updates soon
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:25 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> yippie
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:25 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> My eyes are burning from staring at this screen for so long. I think I'm going to step away and do something else for a while. Ping me when we get answers.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:26 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+	  <div class="message darkable"><span style="font-weight:bold;">romeeeo:</span> I'm torn between eagerly waiting for @companion_12 to finish their download and getting up to go do something actually productive. Like clean my bathroom maybe.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:28 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> at least wait for the torris report
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:28 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">romeeeo:</span> Yeah, ok.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:28 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">lazyeyes99:</span> Hes typing... very slowly :P
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:29 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">torris_sirrot:</span> Okay, basically, I wasnt able to get my phone to work on gas station wifi either. If I had to guess I'd say any device that was on your wifi connection when gestalt.czip started downloading has got some kind of virus that prevents outgoing signals. If anyone has like a playstation or something that was on wifi whenever gestalt started I would like to know if you can get that to work.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:33 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">torris_sirrot:</span> Also 7/11 breakfast burritos are overpriced.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:34 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> my brother has a ps5, have to wait for him to leave for work before i can sneak onto it though.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:35 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">romeeeo:</span> How long?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:35 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> he's supposed to be there at 8:45 so like
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:36 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> wait
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:36 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span>?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:37 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> do any of you guys have like an analog battery powered clock nearby
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:37 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> One in my house, not in my room. Why?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> uhhhhhh
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> my wall clock right now says 8:23 and i can't tell if it's just fucked or if alfamirror's timestamps are wrong
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">torris_sirrot:</span> Mine says 11:23 (EDT)
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> what the fuuuuucccckkkk
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> The past five messages all say 7:50:38, even though I'm pretty sure more than one second has passed.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> @fishnczips
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> no answers just more questions
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">companion_12:</span> This is so twisted
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">companion_12:</span> Have the timestamps been running slow this whole time
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">companion_12:</span> The download timer on my gestalt looks like its counting down real seconds but now I don't trust my own sense of time
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> Christ alive. @companion_12, how much longer?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">companion_12:</span> 12 minutes 42 seconds
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> i feel like im going insane
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> this app is fucking gaslighting us about the passage of time
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">romeeeo:</span> I don't even know what to say anymore. Fuck this. Whatever's going on is not worth it, I'm killing the computer.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">romeeeo:</span> I hope my phone starts working again after I do. @staff fuck you and your stupid games. I'd rather hang around the degenerates on zsys.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> damn, another casualty
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> @staff how many more must die before we get answers
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;color:#b063f2;"><i class="fa-solid fa-shield"></i>
+leftime:</span> I don't know any more than you do.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;color:#b063f2;"><i class="fa-solid fa-shield"></i>
+leftime:</span> I just finished reading through all your messages. I honestly have no idea what's going on, I can't close the app or log out of my account either, and I'm also downloading a 242 terabyte czip called "gestalt".
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;color:#b063f2;"><i class="fa-solid fa-shield"></i>
+leftime:</span> I'm not the one who removed @markasinmark's messages, by the way, so there has to be at least one other hidden mod online. Or at least there was when he was posting them.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> Oh hey Lef. Nice of you to join us. Wanna try banning me, for laughs?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;color:#b063f2;"><i class="fa-solid fa-shield"></i>
+leftime:</span> I have your username up in mod profile right now and clicking kick or ban just gives me an empty textbox.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> Yeah, I thought as much.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> no one gets in no one gets out
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> well i guess some get in
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> but i hope they dont
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;color:#b063f2;"><i class="fa-solid fa-shield"></i>
+leftime:</span> I certainly got in. There was nothing unusual about the login screen.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;color:#b063f2;"><i class="fa-solid fa-shield"></i>
+leftime:</span> <i>message removed</i>
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> ??
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;color:#b063f2;"><i class="fa-solid fa-shield"></i>
+leftime:</span> Who the fuck removed my message? Come out, come out, wherever you are.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> is it automatically flagging a keyword maybe
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;color:#b063f2;"><i class="fa-solid fa-shield"></i>
+leftime:</span> It shouldn't be. As far as I know the only stuff that gets auto-removed like that is outside links. Even Mark's dirty mouth just got censored, not removed.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> also, if it was automatic, wouldn't it block it as soon as you sent it instead of showing it for half a second?
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;color:#b063f2;"><i class="fa-solid fa-shield"></i>
+leftime:</span> <i>message removed</i>
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;color:#b063f2;"><i class="fa-solid fa-shield"></i>
+leftime:</span> Not funny, lurker.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> <i>message removed</i>
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">fishnczips:</span> <i>message removed</i>
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> <i>message removed</i>
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> wtf
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">lazyeyes99:</span> <i>message removed</i>
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;color:#b063f2;"><i class="fa-solid fa-shield"></i>
+leftime:</span> I WILL FREEZE CHAT IF YOU DON'T BEHAVE YOURSELF, ASSHOLE.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> <i>message removed</i>
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">sandwidthesda:</span> <i>message removed</i>
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> jeez
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">who_shot_marina:</span> <i>message removed</i>
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;">markasinmark:</span> <i>message removed</i>
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;color:#b063f2;"><i class="fa-solid fa-shield"></i>
+leftime:</span> <i>message removed</i>
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;color:#b063f2;"><i class="fa-solid fa-shield"></i>
+leftime:</span> K, fuck you. Ten minute time out. Go sit in the corner and think about your actions.
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>
+<div class="message darkable"><span style="font-weight:bold;color:#559ef2;"><i class="fa-solid fa-gears"></i>
+system:</span> <i>The chat has been paused.</i>
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">07:50:38 wed august 17
+        </span>
+      </div></div>
+      <!-- end of messages
+<div class="message darkable"><span style="font-weight:bold;">user:</span> message
+      <div class="msg-corner">...
+        <span class="msg-corner-tooltip">x:y:z wed august 17
+        <span style="opacity:0.5">give star (not available)</span>
+          <span style="color:#f00">report</span>
+        </span>
+      </div></div>	  -->
+    <a href="/alphamirror-2"><span class="chapter-link">next chapter</span> ▶</a>
+    </div>
+    
+    
+  </div>
+  <br/>
+  <div class="footer darkable">alphaMirror is a work of fiction. any resemblance to actual internet users, living or dead, is purely coincidental. you weren't really planning on suing me for libel, were you? 
+    <br>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />
+    this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="font-weight:normal;" class="darkable">creative commons attribution-noncommercial-sharealike 4.0 international license</a>, but don't ask me what that actually means. i just clicked the buttons on their website and copied the little box.</div>
+  
+  
+</body>
+</html>

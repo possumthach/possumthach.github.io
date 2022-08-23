@@ -74,6 +74,14 @@ body {
   height: 100%;
 }
 
+.full-column {
+  border: 2px solid #fff;
+  width: 98%;
+  min-height: 200px;
+  padding: 8px;
+  font-size: 18px;
+}
+
 .about-container{
   height: 200px;
   margin-bottom: 21px;
@@ -93,4 +101,31 @@ a {
 
 a:hover {
   color: #00f;
+}
+
+.alfm-button {
+  background-color: #f00;
+  display: block;
+  width: 130px;
+  padding: 8px;
+  color: #000;
+  text-decoration: none;
+  font-family: "Play", sans-serif;
+  border: 4px double #000;
+}
+
+.alfm-button:hover {
+  background-color: #ff0;
+  display: block;
+  width: 130px;
+  padding: 8px;
+  color: #000;
+  text-decoration: none;
+  font-family: "Play", sans-serif;
+  border: 4px double #000;
+}
+
+.chapter-list {
+  list-style-type: upper-roman;
+  font-family: "Verdana",sans-serif;
 }

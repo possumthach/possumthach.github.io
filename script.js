@@ -3,3 +3,35 @@ var quotes = new Array ("Yeah my mom was gossiping with your mom and she wont le
 var i = Math.floor(83*Math.random())
 
 document.getElementById("subhead-quote").innerHTML = (quotes[i]);
+
+
+function toggleDark() {
+   var element = document.body;
+ element.classList.toggle("dark-mode");
+  const collection = document.getElementsByClassName("darkable");
+  for (let i = 0; i < collection.length; i++) {
+  collection[i].classList.toggle("dark-mode");
+  }}
+
+function toggleOnline() {
+  const collection = document.getElementsByClassName("users-online");
+  for (let i = 0; i < collection.length; i++) {
+  collection[i].classList.toggle("online-hidden");
+  }}
+
+var coll = document.getElementsByClassName("collapse");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+      document.getElementById("collapse-arrow").innerHTML = "▼";
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      document.getElementById("collapse-arrow").innerHTML = "▲";
+    }
+  });
+}
