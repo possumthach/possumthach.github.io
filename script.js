@@ -13,12 +13,6 @@ function toggleDark() {
   collection[i].classList.toggle("dark-mode");
   }}
 
-function toggleOnline() {
-  const collection = document.getElementsByClassName("users-online");
-  for (let i = 0; i < collection.length; i++) {
-  collection[i].classList.toggle("online-hidden");
-  }}
-
 var coll = document.getElementsByClassName("collapse");
 var i;
 
