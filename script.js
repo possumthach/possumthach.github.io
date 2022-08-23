@@ -4,15 +4,6 @@ var i = Math.floor(83*Math.random())
 
 document.getElementById("subhead-quote").innerHTML = (quotes[i]);
 
-
-function toggleDark() {
-   var element = document.body;
- element.classList.toggle("dark-mode");
-  const collection = document.getElementsByClassName("darkable");
-  for (let i = 0; i < collection.length; i++) {
-  collection[i].classList.toggle("dark-mode");
-  }}
-
 var coll = document.getElementsByClassName("collapse");
 var i;
 
@@ -29,3 +20,12 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+function toggleDark() {
+   var element = document.body;
+ element.classList.toggle("dark-mode");
+  const collection = document.getElementsByClassName("darkable");
+  for (let i = 0; i < collection.length; i++) {
+  collection[i].classList.toggle("dark-mode");
+  }}
+
