@@ -1,0 +1,259 @@
+@font-face {
+    font-family: 'rabbid_highway_sign_iiregular';
+    src: url('/style/rabbidhighwaysignii-webfont.woff2') format('woff2'),
+         url('/style/rabbidhighwaysignii-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    background-color: #120e48;
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffcf12;
+    text-shadow: 0px 2px 5px #fb7d1b;
+    text-transform: uppercase;
+    font-family: 'rabbid_highway_sign_iiregular', Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Vollkorn', serif;
+    font-weight: 600;
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid #000;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-family: 'Vollkorn', serif;
+    font-weight: 600;
+    font-size: 22px;
+    padding: 0;
+    margin: 1px;
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+h4 {
+    text-transform: uppercase;
+    font-family: 'Vollkorn', serif;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0;
+    margin: 1px;
+    color: #000;
+}
+
+a.darkLink, a.lightLink {
+    text-decoration: none;
+}
+
+a.darkLink {
+    font-weight: 500;
+    color: #34f0ff;
+}
+
+a.lightLink {
+    font-weight: 600;
+    color: #00f;
+    text-decoration: none;
+}
+
+a.lightLink:hover {
+    font-weight: 600;
+    color: #f00;
+    text-decoration: none;
+}
+
+a.darkLink:hover {
+    font-weight: 600;
+    color: #ffff40;
+}
+
+.homeSidebar, .homeMain {
+    background-color: #1f3095;
+    border-bottom: 4px solid #0066ff;
+    z-index: 1;
+    color: #fff;
+}
+
+.homeSidebar {
+    float: left;
+    margin: 0px 4px 1px 0px;
+    padding: 4px;
+    width: 200px;
+    min-height: 320px;
+}
+
+.homeMain {
+    display: flexbox;
+    min-width: 600px;
+    width: auto;
+    margin: 0px 4px 1px 0px;
+    padding: 6px 16px 6px 16px;
+    min-height: 480px;
+    text-align: justify;
+}
+
+.tab {
+    display: inline-block;
+    border-bottom: 2px solid #0066ff;
+    padding: 4px 4px 2px 4px;
+    margin: 0px 0px 6px 0px;
+    background-color: #1f3095;
+    color: #fff;
+    min-width: 10%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    overflow-y: visible;
+    z-index: 9;
+}
+
+.tabLink {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.tab:hover {
+    background-image: none;
+    background-color: #0066ff;
+    color: #ffff40;
+    border-color: #0066ff;
+    overflow-y: visible;
+}
+
+.tabLink:hover {
+    color: #ffff40;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.unused:hover {
+    cursor: default;
+    text-decoration: line-through;
+    color: #ee0000;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: visible;
+}
+
+.ulSidebar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 8px 1px 8px;
+}
+
+li {
+    padding: 0;
+    margin: 0;
+    overflow-y: visible;
+}
+
+.here {
+    text-decoration: underline;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+    overflow-y: visible;
+}
+ .dropdownContent {
+  display: none;
+  margin-top: 2px;
+  position: absolute;
+  background-color: #1f3095;
+  border: 2px solid #120e48;
+  color: #fff;
+  padding: 1px 8px 1px 8px;
+  z-index: 8;
+  text-transform: none;
+  text-align: left;
+  font-weight: 400;
+  overflow-y: visible;
+  font-family: 'Verdana', sans-serif;
+}
+.dropdown:hover .dropdownContent {
+    display: block;
+    z-index: 9;
+    overflow-y: visible;
+  }
+
+.dropdown:hover {
+    text-decoration: dashed underline;
+}
+
+.articleImage {
+    max-width: 90%;
+    image-rendering: pixelated;
+}
+
+.articleCaption {
+    color: #666;
+    font-size: 12px;
+}
+
+table {
+    border: 2px solid #000;
+}
+
+table.article6Cell, table.article2Cell, table.article4Cell, table.articleDoubleCell {
+    width: 90%;
+}
+table.article1Cell {
+    width: 45%;
+}
+table.articleQuadCell {
+    width: 95%
+}
+table.article6CellB {
+    width: 80%;
+}
+
+td {
+    border: 1px solid #000;
+    width: 30%;
+    text-align: center;
+}
+
+.hovernote {
+    text-decoration: dashed underline;
+
+}
+
+.hovernote:hover {
+    cursor: help;
+    color: #ffff40;
+}
+
+.quotegen {
+    display: none;
+  }
+
+  .rantxt {
+    color: #000;
+    text-decoration: none;
+  }

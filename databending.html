@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="quadriformis.css"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Vollkorn:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"> 
+<link rel="icon" type="image/x-icon" href="/icon2.ico">  
+<title>QUADRIFORMIS</title>
+</head>
+<body>
+<h1>QUADRIFORMIS</h1>
+<div class="tabBg"></div>
+        <div class="tab"><a class="tabLink" href="/">HOME</a></div>
+        <div class="tab"><a class="tabLink" href="/about.html">ABOUT</a></div>
+        <div class="tab dropdown here">
+            <span>BLOG</span>
+            <div class="dropdownContent" style="min-width:80px;">
+                <ul>
+                    <li>🡢 <a href="/articles.html" class="darkLink">articles</a></li>
+                    <li>🡢 <a class="unused" title="under construction!">???</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab"><a class="tabLink" href="/music.html">MUSIC</a></div>
+        <div class="tab dropdown"><span>WORKS</span>
+            <div class="dropdownContent" style="min-width:280px;">
+                <ul>
+                    <li>🡢 <a href="/ihie.html" class="darkLink">immortal hand, immortal eye</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab"><a class="tabLink unused" title="under construction!">SHOP</a></div>
+    
+<div class="homeMain">
+    <h3>Databending in Audacity</h3>
+    <p>Databending is the process of intentionally altering data in order to induce corruption for artistic reasons. Usually, this means screwing with image files to make them distorted in some way. Databending makes much more authentic "glitchcore" than anything you can do in a typical image editor, and you don't even have to understand anything about computers to do it (I sure don't!)
+    <br><br>This article is a step-by-step guide to databending images using Audacity, a free audio editing program. Audacity can actually import things that aren't supposed to be audio, such as images, and from there you can use the program's built-in effects menu to manipulate the data. When you translate the altered audio back into an image file, you get a glitchy, distorted picture, with the exact manner of distortion determined by what effects you applied in Audacity.
+    <br><br>I owe a huge debt of gratitude to Jojo Decamarks, whose <a class="lightLink" href="https://decamarks.neocities.org/databend">excellent guide</a> is how I learned to databend like this in the first place. The process of how to actually get the images in and out of Audacity as described in this article is basically yanked wholesale from Jojo's guide, with the addition of some extra screenshots and notes designed to help out people like me who are chronically unable to follow computer-related instructions unless they get walked through every single step.
+    <br><br>The second part of this article is all original documentation of how Audacity effects translate to image distortion. As far as I know, nothing else like this exists on the internet, so I hope it will be a useful resource to anyone who wants to get into databending without fussing through hours of trial-and-error to get the results they want.</p>
+    <h3>Image Preparations</h3>
+    <p>For this article, I'm using a standard test image to demonstrate every effect; this is '"Female" (NTSC test image)' from the <a class="lightLink" href="https://sipi.usc.edu/database/database.php?volume=misc">USC SIPI Image Database</a>.
+        <center><br><img class="articleImage" src="/documentation/female-original.png">
+            <br><span class="articleCaption">all the <a class="lightLink" href="https://en.wikipedia.org/wiki/Lenna">women with names</a> have been removed from the database, leaving only three "female"s, of which this is one</span></center>
+    <br>Downloaded straight from the database, "Female" is a 256x256 .tiff image. I imported it into GIMP and upscaled it to 512x512 (cubic interpolation) because I felt like 256 pixels was a little small for properly showing off databending effects.
+        <center><br><img class="articleImage" src="/documentation/female-0.bmp">
+            <br><span class="articleCaption">computer, enhance!</span></center>
+    <br>You can databend virtually any static image you want using this method, with the caveat that it doesn't have a <i>transparent background.</i> This method requires the image file to be a 24-bit .bmp, which doesn't have an alpha (transparency) channel. If your desired image has complicated transparency effects, you will have to come up with some alternate solutions, like putting it on a white background and using "multiply" blend mode in an image editor to overlay it on something else.
+    <br><br>Anyway. Export your image with these settings:
+    <center><br><img class="articleImage" src="/documentation/process0.png"></center>    
+    <br><center><ul>
+         <li>Run-Length Encoded: <b>no</b></li>
+         <li>Do not write color space information: <b>no</b></li>
+         <li>24 bits: <b>R8 G8 B8</b></li>
+        </ul></center>
+    <br>I know for sure that this works in GIMP; I haven't been able to make it work in Krita. According to the guide linked above, it also works in MS Paint, but I haven't tested that myself. I have no idea about other image editing software, so if you can't get the right export settings in your program of choice, uhh, download GIMP and do it there instead? It's free. How have you made it this far in life without having downloaded <i>some</i> version of GIMP?
+    <br><br>Now that you have your .bmp image, you can transmute it into audio data and get to bending.
+</p>
+    <h3>Importing</h3>
+    <p>Open Audacity (I'm working in version 3.2.0) and select File > Import > Raw Data...
+        <center><br><img class="articleImage" src="/documentation/process1.png"></center>
+    <br>Click on your .bmp image in the file explorer. You will see this menu pop up; don't just mash past it! 
+    <center><br><img class="articleImage" src="/documentation/process2.png"></center>
+    <br>You have to set it to these particular settings:
+         <center><br><img class="articleImage" src="/documentation/process3.png"></center>    
+    <br><center><ul>
+         <li>Encoding: <b>U-Law</b></li>
+         <li>Byte order: <b>Big-endian</b></li>
+         <li>Channels: <b>1 Channel (Mono)</b></li>
+         <li>Start offset: <b>0 bytes</b></li>
+         <li>Amount to import: <b>100%</b></li>
+         <li>Sample rate: <b>44100 Hz</b></li>
+        </ul></center>
+    <br><i>Then</i> hit import. Now you have audio data visible in the main Audacity interface.
+          <center><br><img class="articleImage" src="/documentation/process4.png"></center></p>
+
+    <h3>Precautions</h3>
+    <p>When editing, you have to be a little bit careful not to distort the whole file. The very beginning and end of the data have to stay as they are, or else the whole thing will get corrupted and fail to save as an actual image.
+    <br><br>Presumably, this is where things like image resolution and bit depth are stored -- I don't actually know anything about how images are encoded, so I'm just guessing. Regardless, if you mess with these areas it will effectively turn the file into gibberish and your computer will throw its hands up and go "I dunno, man, I can't read this."
+          <center><br><img class="articleImage" src="/documentation/process7.png">
+        <br><span class="articleCaption">i guess computers use 'we' pronouns these days</span></center>
+    <br>Because it's not always clear where exactly the limit is, and I didn't want to fiddle with getting it exactly right, the example images in this article will usually have a band of unaltered pixels at the top and bottom. If you want to make really sure you get your whole image in the databending space, you can just add some buffer pixels to the top and bottom edges before converting to .bmp.
+    <br><br>The rest of the file is pretty much fair game, as long as you don't push it <i>too</i> far.
+    </p>
+    <h3>Exporting</h3>
+    <p>Once you've manipulated the audio to your heart's content, you need to turn it back into an image file. Go to File > Export > Export Audio...
+        <center><br><img class="articleImage" src="/documentation/process8.png">
+        <br><img class="articleImage" src="/documentation/process9.png"></center>
+    <br>The default setup of this menu can change depending on what you last did in Audacity -- for example, if you're using it for actual music, the default export settings might be .mp3 or .oga or whatever. Change it to these settings:
+    <br><center><ul>
+        <li>Save as type: <b>Other uncompressed files</b></li>
+        <li>Header: <b>RAW (header-less)</b></li>
+        <li>Encoding: <b>U-Law</b></li>
+       </ul></center>
+    <br>It will automatically change the file extension to .raw when you select "Other uncompressed files". Make sure you go back to the name box and set it to .bmp.
+        <center><br><img class="articleImage" src="/documentation/process10.png"></center>    
+    <br>You'll get jumped by a warning message telling you some programs won't open files with nonstandard extensions.
+    <center><br><img class="articleImage" src="/documentation/process11.png"></center>   
+    <br>But you know what you're doing, so just hit "Yes" to skip past this. You also might get a prompt to edit metadata tags. I don't know if editing these has any effect on the resulting image file (probably not) so just clear them all and press "OK". You can tick the box at the bottom to stop the metadata menu from showing up every time.
+    <center><br><img class="articleImage" src="/documentation/process12.png"></center>
+    <br>Now you have a new .bmp file ready to play with! Assuming it didn't get corrupted, you can open it in any image viewing or editing program that takes .bmp. As long as it stays a .bmp with the same encoding settings, you can throw it back into Audacity and mess with it even more, or you can re-save it as a .png and use it for whatever other purposes.
+    <br><br>Okay, now let's get into the fun part: how do different audio effects translate to image effects?</p>
+    <h3>Effects</h3>
+    <p>Actually one more thing. Just importing and exporting a .bmp into Audacity will distort it a little bit, even if you don't touch the audio data at all. For example, here's "Female" as it looked fresh out of GIMP compared to how it looks after passing through Audacity ostensibly untouched:
+        <center><br><img class="articleImage" src="/documentation/comparison1.png"></center>
+    <br>Anyone who actually knows how computers work is free to tell me how / why this happens.
+    </p>
+    <h4>Amplify</h4>
+    <p>Increasing amplitude makes the image darker, decreasing amplitude makes the image lighter. Simple as.
+        <center><table class="article6Cell">
+            <tr>
+                <td>+1 dB</td>
+                <td>+3 dB</td>
+                <td>+10 dB</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-1a.bmp" width="100%"></td>
+                <td><img src="/documentation/female-1b.bmp" width="100%"></td>
+                <td><img src="/documentation/female-1c.bmp" width="100%"></td>
+            </tr>
+        </table>
+        <br><table class="article6Cell">
+            <tr>
+                <td>-1 dB</td>
+                <td>-3 dB</td>
+                <td>-10 dB</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-1d.bmp" width="100%"></td>
+                <td><img src="/documentation/female-1e.bmp" width="100%"></td>
+                <td><img src="/documentation/female-1f.bmp" width="100%"></td>
+            </tr>
+        </table></center>
+        <br>As far as I can tell, there is no upper or lower limit to this one. I went all the way to +50 dB, the maximum Audacity would let me do at once, and it still made a valid image file. I assume that at some point you'll end up with a completely black image, which isn't very interesting, but it's still technically within the bounds of "valid image". Going 50 dB in the other direction makes a very washed-out image, and presumably leads to a completely white or grey one as the amplitude approaches total silence.
+       <br><br><center><table class="article2Cell">
+            <tr>
+                <td>+50 dB</td>
+                <td>-50 dB</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-1g.bmp" width="100%"></td>
+                <td><img src="/documentation/female-1h.bmp" width="100%"></td>
+            </tr>
+        </table>
+    </center>
+    </p>
+    <h4>Bass and Treble</h4>
+    <p>Increasing treble makes the image redder and more saturated. Decreasing treble makes the image cyan-er and less saturated. Increasing bass increases both red and cyan while also making the image darker and adding a slight smearing effect. Decreasing bass has similar effects to increasing treble plus making the image lighter and less saturated.
+        <center><table class="article6Cell">
+            <tr>
+                <td>+1 Treble</td>
+                <td>+3 Treble</td>
+                <td>+10 Treble</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-2a.bmp" width="100%"></td>
+                <td><img src="/documentation/female-2b.bmp" width="100%"></td>
+                <td><img src="/documentation/female-2c.bmp" width="100%"></td>
+            </tr>
+        </table>
+        <br><table class="article6Cell">
+            <tr>
+                <td>-1 Treble</td>
+                <td>-3 Treble</td>
+                <td>-10 Treble</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-2d.bmp" width="100%"></td>
+                <td><img src="/documentation/female-2e.bmp" width="100%"></td>
+                <td><img src="/documentation/female-2f.bmp" width="100%"></td>
+            </tr>
+        </table>
+        <br><table class="article6Cell">
+            <tr>
+                <td>+1 Bass</td>
+                <td>+3 Bass</td>
+                <td>+10 Bass</td>
+            </tr>
+            <tr>
+                <td>(corrupted)</td>
+                <td><img src="/documentation/female-2h.bmp" width="100%"></td>
+                <td><img src="/documentation/female-2i.bmp" width="100%"></td>
+            </tr>
+        </table>
+        <br><table class="article6Cell">
+            <tr>
+                <td>-1 Bass</td>
+                <td>-3 Bass</td>
+                <td>-10 Bass</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-2j.bmp" width="100%"></td>
+                <td><img src="/documentation/female-2k.bmp" width="100%"></td>
+                <td><img src="/documentation/female-2l.bmp" width="100%"></td>
+            </tr>
+        </table>
+        <br><table class="article4Cell">
+            <tr>
+                <td>+3 Treble, +3 Bass</td>
+                <td>-3 Treble, +3 Bass</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-2m.bmp" width="100%"></td>
+                <td><img src="/documentation/female-2n.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td>+3 Treble, -3 Bass</td>
+                <td>-3 Treble, -3 Bass</td>
+            </tr>
+            <tr>
+                <td>(corrupted)</td>
+                <td><img src="/documentation/female-2p.bmp" width="100%"></td>
+            </tr>
+        </table>
+        <br><table class="article4Cell">
+            <tr>
+                <td>+30 Treble</td>
+                <td>-30 Treble</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-2q.bmp" width="100%"></td>
+                <td><img src="/documentation/female-2r.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td>+30 Bass</td>
+                <td>-30 Bass</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-2s.bmp" width="100%"></td>
+                <td><img src="/documentation/female-2t.bmp" width="100%"></td>
+            </tr>
+        </table>
+        </center>
+        <br>I can't find a definitive limit for this one either, but sometimes it gets fussy and will break the image even if you're adjusting by very small and reasonable amounts.</p>
+    <h4>Pitch</h4>
+    <p>Changing pitch fucks up the image very quickly, turning it into grey smears. Increasing makes smears that go south-west, decreasing makes them go north-east.
+        <center><table class="article6Cell">
+            <tr>
+                <td>+1%</td>
+                <td>+3%</td>
+                <td>+10%</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-3a.bmp" width="100%"></td>
+                <td><img src="/documentation/female-3b.bmp" width="100%"></td>
+                <td><img src="/documentation/female-3c.bmp" width="100%"></td>
+            </tr>
+        </table>
+        <br><table class="article6Cell">
+            <tr>
+                <td>-1%</td>
+                <td>-3%</td>
+                <td>-10%</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-3d.bmp" width="100%"></td>
+                <td><img src="/documentation/female-3e.bmp" width="100%"></td>
+                <td><img src="/documentation/female-3f.bmp" width="100%"></td>
+            </tr>
+        </table></center>
+        <br>Interesting things can happen if you change the pitch in one direction and then immediately move it back. This still makes the image into a bunch of grey blocks, but some of the brightness information is kept intact.
+        <center><br><table class="article2Cell">
+            <tr>
+                <td>+1%, then -1%</td>
+                <td>-1%, then +1%</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-3g.bmp" width="100%"></td>
+                <td><img src="/documentation/female-3h.bmp" width="100%"></td>
+            </tr>
+        </table></center></p>
+    <h4>Speed</h4>
+    <p>Increasing speed immediately breaks the file. Decreasing it keeps the file intact, but turns the image into more grey smears.
+        <center><table class="article6Cell">
+            <tr>
+                <td>-1%</td>
+                <td>-3%</td>
+                <td>-10%</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-4b.bmp" width="100%"></td>
+                <td><img src="/documentation/female-4c.bmp" width="100%"></td>
+                <td><img src="/documentation/female-4d.bmp" width="100%"></td>
+            </tr>
+        </table></center>
+    <br>Like with pitch, moving in one direction and then the other results in a more coherent image. Unlike pitch, it doesn't seem to matter which way you go first; I got the exact same file for both options. It has an interesting effect of turning the image greyscale with an overlay of RGB/CMY stripes.
+    <center><br><table class="article1Cell">
+        <tr>
+            <td>-1%, then +1% | +1%, then -1%</td>
+        </tr>
+        <tr>
+            <td><img src="/documentation/female-4e.bmp" width="100%"></td>
+        </tr>
+    </table></center></p>
+    <h4>Tempo</h4>
+    <p>As with speed, increasing tempo breaks the file immediately, but you can decrease and still get a valid image. The image breaks into a "staircase" of chunks tinted different colors.
+        <center><table class="article6Cell">
+            <tr>
+                <td>-1%</td>
+                <td>-3%</td>
+                <td>-10%</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-5b.bmp" width="100%"></td>
+                <td><img src="/documentation/female-5c.bmp" width="100%"></td>
+                <td><img src="/documentation/female-5d.bmp" width="100%"></td>
+            </tr>
+        </table></center>
+        <br>I was able to get the back-and-forth technique to work going +1 to -1, but not the other way around.
+        <center><br><table class="article1Cell">
+            <tr>
+                <td>+1%, then -1%</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-5e.bmp" width="100%"></td>
+            </tr>
+        </table></center></p>
+    <h4>Classic Filters</h4>
+    <p>This one has a lot of parameters you can tweak, so I've included a screenshot of exactly what the effects menu looked like for each trial, which is hopefully easier to parse than just a list of what's in which field.
+        <center><table class="articleDoubleCell">
+            <tr>
+                <td><img src="/documentation/6a-filter.png" width="100%"></td>
+                <td><img src="/documentation/female-6a.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/6b-filter.png" width="100%"></td>
+                <td><img src="/documentation/female-6b.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/6c-filter.png" width="100%"></td>
+                <td><img src="/documentation/female-6c.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/6d-filter.png" width="100%"></td>
+                <td><img src="/documentation/female-6d.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/6e-filter.png" width="100%"></td>
+                <td><img src="/documentation/female-6e.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/6f-filter.png" width="100%"></td>
+                <td>(corrupted)</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/6g-filter.png" width="100%"></td>
+                <td><img src="/documentation/female-6g.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/6h-filter.png" width="100%"></td>
+                <td><img src="/documentation/female-6h.bmp" width="100%"></td>
+            </tr>
+        </table></center>
+    <br>You could fiddle with this a lot more, and I may revisit it some other time to see what else it can do, but for now let's move on.</p>
+    <h4>Click Removal</h4>
+    <p>In order to use this one, you have to tweak the settings to be more sensitive than default, otherwise you'll get an error saying the algorithm didn't do anything to this audio.
+        <center><table class="article6Cell">
+            <tr>
+                <td>Threshold: 29<br>Spike Width:20</td>
+                <td>Threshold: 15<br>Spike Width:32</td>
+                <td>Threshold: 1<br>Spike Width:40</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-7a.bmp" width="100%"></td>
+                <td><img src="/documentation/female-7b.bmp" width="100%"></td>
+                <td><img src="/documentation/female-7c.bmp" width="100%"></td>
+            </tr>
+        </table></center>
+        <br>You can re-apply the effect multiple times to get slightly more distortion each time, but trying to stack it too many times can break the image file. You also get diminishing returns as the amount of data that visibly changes gets smaller with every iteration.
+        <center><br><table class="article6Cell">
+            <tr>
+                <td>15/32</td>
+                <td>15/32, 7/40</td>
+                <td>15/32/ 7/40, 29/34</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-7d.bmp" width="100%"></td>
+                <td><img src="/documentation/female-7e.bmp" width="100%"></td>
+                <td><img src="/documentation/female-7f.bmp" width="100%"></td>
+            </tr>
+        </table></center>
+    </p>
+    <h4>Compressor</h4>
+    <p>Another one with lots of possible adjustments.
+        <center><table class="articleDoubleCell">
+            <tr>
+                <td><img src="/documentation/8a-comp.png" width="80%"></td>
+                <td><img src="/documentation/female-8a.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/8b-comp.png" width="80%"></td>
+                <td><img src="/documentation/female-8b.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/8c-comp.png" width="80%"></td>
+                <td>(corrupted)</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/8d-comp.png" width="80%"></td>
+                <td>(corrupted)</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/8e-comp.png" width="80%"></td>
+                <td><img src="/documentation/female-8e.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/8f-comp.png" width="80%"></td>
+                <td><img src="/documentation/female-8f.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/8g-comp.png" width="80%"></td>
+                <td><img src="/documentation/female-8g.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/8h-comp.png" width="80%"></td>
+                <td><img src="/documentation/female-8h.bmp" width="100%"></td>
+            </tr>
+        </table></center>
+        <br>I kept trying this one to see if I could get something cool to happen with the horizontal striping effect, but no luck. Alas, that's science: sometimes your data is actually boring as hell and you have to let it take up space on the website anyway.
+   <center><br><img class="articleImage" src="/documentation/newton.png">
+        <br><span class="articleCaption">direct quote from the ceo of science, btw</span></center> </p>
+    <h4>Distortion</h4>
+    <p>This is, as they say, "the big guns." There are so many parameters to tweak, <a class="hovernote" title="Well, I'VE already been here for hours, making all these images, writing the documentation, and formatting the webpage -- but you don't care about me, you care about you. And I respect that.">we could be here for hours.</a> Instead, I've just documented the results for most of the "factory preset" options.
+        <center><table class="articleQuadCell">
+            <tr>
+                <td style="width:120px;">Default</td>
+                <td><img src="/documentation/female-9a.bmp" width="100%"></td>
+                <td style="width:120px;">Hard clip</td>
+                <td><img src="/documentation/female-9c.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:120px;">Soft clip</td>
+                <td><img src="/documentation/female-9d.bmp" width="100%"></td>
+                <td style="width:120px;">Fuzz Box</td>
+                <td><img src="/documentation/female-9e.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:120px;">Walkie-talkie</td>
+                <td><img src="/documentation/female-9f.bmp" width="100%"></td>
+                <td style="width:120px;">Blues drive sustain</td>
+                <td><img src="/documentation/female-9g.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:120px;">Light Crunch Overdrive</td>
+                <td><img src="/documentation/female-9h.bmp" width="100%"></td>
+                <td style="width:120px;">Heavy Overdrive</td>
+                <td><img src="/documentation/female-9i.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:120px;">3rd Harmonic</td>
+                <td><img src="/documentation/female-9j.bmp" width="100%"></td>
+                <td style="width:120px;">Valve Overdrive</td>
+                <td><img src="/documentation/female-9k.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:120px;">2nd Harmonic</td>
+                <td><img src="/documentation/female-9l.bmp" width="100%"></td>
+                <td style="width:120px;">Gated Expansion Distortion</td>
+                <td><img src="/documentation/female-9m.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:120px;">Leveller, Light</td>
+                <td><img src="/documentation/female-9n.bmp" width="100%"></td>
+                <td style="width:120px;">Leveller, Heaviest</td>
+                <td><img src="/documentation/female-9o.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:120px;">Half-Wave Rectifier</td>
+                <td><img src="/documentation/female-9p.bmp" width="100%"></td>
+                <td style="width:120px;">Full-Wave Rectifier</td>
+                <td><img src="/documentation/female-9q.bmp" width="100%"></td>
+            </tr>
+            <tr>
+            <td style="width:120px;">Full-Wave Rectifier (DC Blocked)</td>
+            <td><img src="/documentation/female-9r.bmp" width="100%"></td>
+            <td style="width:120px;">Percussion Limiter</td>
+            <td><img src="/documentation/female-9s.bmp" width="100%"></td>
+            </tr>
+        </table></center>
+    </p>
+    <h4>Echo</h4>
+    <p>Echo creates ghostly duplicates of image parts, which is one of my favorite effects. Changing delay time adjusts the position of the echoed image, and decay factor makes it more intense.
+        <center><table class="article6Cell">
+            <tr>
+                <td>Delay time: 0.01<br>Decay factor: 0.1</td>
+                <td>Delay time: 0.1<br>Decay factor: 0.1</td>
+                <td>Delay time: 1<br>Decay factor: 0.1</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-10a.bmp" width="100%"></td>
+                <td><img src="/documentation/female-10b.bmp" width="100%"></td>
+                <td><img src="/documentation/female-10c.bmp" width="100%"></td>
+            </tr>
+        </table>
+        <br><table class="article6Cell">
+            <tr>
+                <td>Delay time: 0.01<br>Decay factor: 0.2</td>
+                <td>Delay time: 0.01<br>Decay factor: 0.4</td>
+                <td>Delay time: 0.01<br>Decay factor: 0.8</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-10d.bmp" width="100%"></td>
+                <td><img src="/documentation/female-10e.bmp" width="100%"></td>
+                <td><img src="/documentation/female-10f.bmp" width="100%"></td>
+            </tr>
+        </table></center>
+    </p>
+    <h4>Filter Curve EQ</h4>
+    <p>Another one where I'm just going to run through the included presets.
+        <center><table class="articleDoubleCell">
+            <tr>
+                <td style="width:20%;">100Hz Rumble</td>
+                <td><img src="/documentation/female-11a.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:80px;">AM Radio</td>
+                <td><img src="/documentation/female-11b.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:80px;">Bass Boost</td>
+                <td><img src="/documentation/female-11c.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:80px;">Bass Cut</td>
+                <td><img src="/documentation/female-11d.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:80px;">Low rolloff for speech</td>
+                <td><img src="/documentation/female-11e.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:80px;">RIAA</td>
+                <td><img src="/documentation/female-11f.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:80px;">Telephone</td>
+                <td><img src="/documentation/female-11g.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:80px;">Treble Boost</td>
+                <td><img src="/documentation/female-11h.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:80px;">Treble Cut</td>
+                <td><img src="/documentation/female-11i.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:80px;">Walkie-talkie</td>
+                <td><img src="/documentation/female-11j.bmp" width="100%"></td>
+            </tr>
+        </table></center></p>
+    <h4>Invert</h4>
+    <p>Change of pace: this one has no settings, no adjustments, no tweaks, et cetera. You press the button and it inverts the waveform. Snappy!
+        <center><br><table class="article1Cell">
+            <tr>
+                <td><img src="/documentation/female-12.bmp" width="100%"></td>
+            </tr>
+        </table></center>
+    </p>
+    <h4>Loudness Normalization</h4>
+    <p>And we're back to stuff with checkboxes and dropdown menus and shit. This one isn't very exciting, though. I tried three permutations of options and the results were almost identical. As far as I can tell, loudness normalization is functionally identical to a negative amplify.
+    <center><table class="articleDoubleCell">
+        <tr>
+            <td><img src="/documentation/13a-norm.png" width="100%"></td>
+            <td><img src="/documentation/female-13a.bmp" width="100%"></td>
+        </tr>
+        <tr>
+            <td><img src="/documentation/13b-norm.png" width="100%"></td>
+            <td><img src="/documentation/female-13b.bmp" width="100%"></td>
+        </tr>
+        <tr>
+            <td><img src="/documentation/13c-norm.png" width="100%"></td>
+            <td><img src="/documentation/female-13c.bmp" width="100%"></td>
+        </tr>
+    </table></center></p>
+    <h4>Noise Reduction</h4>
+    <p>The first time you open this effect panel, the bottom section will be greyed out until you give it a "noise profile".
+        <center><img class="articleImage" src="/documentation/14-0.png">
+        <br><span class="articleCaption">this is what it looks like <i>not</i> greyed out, because i forgot to get a screenshot of that</span></center> 
+    <br>It says to select a few seconds of "just noise". For the first trial with this one, I kept the selection area where it had been for all the other effects -- essentially, the entire "working area" -- and proceeded with the default settings. Here's how that turned out:
+    <center><br><table class="article1Cell">
+        <tr>
+            <td><img src="/documentation/female-14a.bmp" width="100%"></td>
+        </tr>
+    </table></center>
+    <br>Nothing special. It looks pretty much like another negative amplify. I didn't bother testing various settings for that noise profile, and instead went back and selected a different area, specifically a little plateau between 11 and 12 seconds.
+    <center><br><img class="articleImage" src="/documentation/14b-noise.png">
+        <br><span class="articleCaption">here's a little behind-the-scenes secret: the waveform in the "importing" section isn't actually from "female". i originally used a different test image, but that ended up being weirdly volatile and not working very well, so i stuck to "female" for all the example images.</span></center>
+    <br>Then I re-selected the whole working area to apply the actual noise reduction effect. This had a much more interesting outcome:
+    <center><br><table class="article1Cell">
+        <tr>
+            <td><img src="/documentation/female-14b.bmp" width="100%"></td>
+        </tr>
+    </table></center>
+    <br>So, instead of fiddling with sliders, I tested the range of this effect by selecting different areas for the noise profile, aiming for different "textures" in the waveform. I've included a screenshot of the selected noise profile area to go along with each image here.
+    <center><br><table class="article6CellB">
+        <tr>
+            <td><img src="/documentation/14c-noise.png" style="min-width:200px;max-width:100%;"></td>
+            <td><img src="/documentation/14d-noise.png" style="min-width:200px;max-width:100%;"></td>
+            <td><img src="/documentation/14e-noise.png" style="min-width:200px;max-width:100%"></td>
+        </tr>
+        <tr>
+            <td><img src="/documentation/female-14c.bmp" width="100%"></td>
+            <td><img src="/documentation/female-14d.bmp" width="100%"></td>
+            <td><img src="/documentation/female-14e.bmp" width="100%"></td>
+        </tr>
+    </table>
+    <br><table class="article6CellB">
+        <tr>
+            <td><img src="/documentation/14f-noise.png" style="min-width:200px;max-width:100%;"></td>
+            <td><img src="/documentation/14g-noise.png" style="min-width:200px;max-width:100%;"></td>
+            <td><img src="/documentation/14h-noise.png" style="min-width:200px;max-width:100%"></td>
+        </tr>
+        <tr>
+            <td><img src="/documentation/female-14f.bmp" width="100%"></td>
+            <td><img src="/documentation/female-14g.bmp" width="100%"></td>
+            <td><img src="/documentation/female-14h.bmp" width="100%"></td>
+        </tr>
+    </table></center>
+    <br>Okay, now <i>these</i> are fun. This is one I'd highly encourage you to play around with, especially if you have a larger file with lots of differently-shaped areas to pick your noise profile from.
+    </p>
+    <h4>Normalize</h4>
+    <p>These are all done with "Remove DC offset" checked. The effects are much less pronounced if you turn that off.
+        <center><table class="article6Cell">
+            <tr>
+                <td>Peak amplitude: -1 dB</td>
+                <td>Peak amplitude: -3 dB</td>
+                <td>Peak amplitude: -10 dB</td>
+            </tr>
+            <tr>
+                <td><img src="/documentation/female-15a.bmp" width="100%"></td>
+                <td><img src="/documentation/female-15b.bmp" width="100%"></td>
+                <td><img src="/documentation/female-15c.bmp" width="100%"></td>
+            </tr>
+        </table></center>
+    </p>
+    <h4>Phaser</h4>
+    <p>This one is <i>really</i> cool, and it also has a whole bunch of options to tweak.
+        <center><table class="articleDoubleCell">
+            <tr>
+                <td style="width:30%;"><img src="/documentation/16a-phaser.png" width="100%"></td>
+                <td><img src="/documentation/female-16a.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:30%;"><img src="/documentation/16b-phaser.png" width="100%"></td>
+                <td><img src="/documentation/female-16b.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:30%;"><img src="/documentation/16c-phaser.png" width="100%"></td>
+                <td><img src="/documentation/female-16c.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:30%;"><img src="/documentation/16d-phaser.png" width="100%"></td>
+                <td><img src="/documentation/female-16d.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:30%;"><img src="/documentation/16e-phaser.png" width="100%"></td>
+                <td><img src="/documentation/female-16e.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:30%;"><img src="/documentation/16f-phaser.png" width="100%"></td>
+                <td><img src="/documentation/female-16f.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:30%;"><img src="/documentation/16g-phaser.png" width="100%"></td>
+                <td><img src="/documentation/female-16g.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:30%;"><img src="/documentation/16h-phaser.png" width="100%"></td>
+                <td><img src="/documentation/female-16h.bmp" width="100%"></td>
+            </tr>
+        </table></center>
+    </p>
+    <h4>Reverb</h4>
+    <p>Another one of my favorites. Also has a lot of options to poke at, but here are the results for all the factory presets.
+        <center><table class="articleQuadCell">
+            <tr>
+                <td style="width:120px;">Default</td>
+                <td><img src="/documentation/female-17a.bmp" width="100%"></td>
+                <td style="width:120px;">Vocal I</td>
+                <td><img src="/documentation/female-17b.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:120px;">Vocal II</td>
+                <td><img src="/documentation/female-17c.bmp" width="100%"></td>
+                <td style="width:120px;">Bathroom</td>
+                <td><img src="/documentation/female-17d.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:120px;">Small Room Bright</td>
+                <td>(corrupted)</td>
+                <td style="width:120px;">Small Room Dark</td>
+                <td><img src="/documentation/female-17f.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:120px;">Medium Room</td>
+                <td><img src="/documentation/female-17g.bmp" width="100%"></td>
+                <td style="width:120px;">Large Room</td>
+                <td><img src="/documentation/female-17h.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:120px;">Church Hall</td>
+                <td><img src="/documentation/female-17i.bmp" width="100%"></td>
+                <td style="width:120px;">Cathedral</td>
+                <td><img src="/documentation/female-17j.bmp" width="100%"></td>
+            </tr>
+        </table></center>
+    </p>
+    <h4>Reverse</h4>
+    <p>Like Invert, this is a one-shot.
+        <center><table class="article1Cell">
+            <tr>
+                <td><img src="/documentation/female-18.bmp" width="100%"></td>
+            </tr>
+        </table></center>
+    <br>Surprise! It's upside-down and backwards. How unexpected.
+    <br><br>What's actually unexpected is how this affects the colors. I would've expected them to either not change at all or to be completely inverted. Instead, the reds haven't changed at all, and green and purple have swapped places. The wrap-around displacement of the picture is also interesting, but I think that's easier to account for than the color thing.
+    </p>
+    <h4>Wahwah</h4>
+    <p>Wahwah makes some of my absolute favorite distortions. I really love the greyscale smearing and wavy lines this can spit out. Visually, it's a little similar to phaser, but wahwah tends to keep the essential shape of the image more intact while phaser just writes over it.
+        <center><table class="articleDoubleCell">
+            <tr>
+                <td style="width:30%;"><img src="/documentation/19a-wahwah.png" width="100%"></td>
+                <td><img src="/documentation/female-19a.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:30%;"><img src="/documentation/19b-wahwah.png" width="100%"></td>
+                <td><img src="/documentation/female-19b.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:30%;"><img src="/documentation/19c-wahwah.png" width="100%"></td>
+                <td><img src="/documentation/female-19c.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:30%;"><img src="/documentation/19d-wahwah.png" width="100%"></td>
+                <td><img src="/documentation/female-19d.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:30%;"><img src="/documentation/19e-wahwah.png" width="100%"></td>
+                <td><img src="/documentation/female-19e.bmp" width="100%"></td>
+            </tr>
+            <tr>
+                <td style="width:30%;"><img src="/documentation/19f-wahwah.png" width="100%"></td>
+                <td><img src="/documentation/female-19f.bmp" width="100%"></td>
+            </tr>
+        </table></center>
+    </p>
+<p>
+    And with that, we've reached the end of the standard effects menu. There are plenty left in the plugins section, some of which do come included when you download Audacity, but they're not "core" features of the program. But there are still a few more things you can do to your data that don't involve the effects menu at all!
+</p>
+    <h4>Merging Tracks</h4>
+    <p>You aren't limited to playing with just one file at a time. <a class="hovernote" title="Just like particle physics!">You can also smash them together to see what happens!</a> You can combine image data with other images, normal audio, or other kinds of files imported via the "raw data" option. I'm going to bring in a <a class="lightLink" href="https://commons.wikimedia.org/wiki/File:A_piece_of_toast_with_eyes.jpg">perennial favorite of mine</a>, which I've saved as a .bmp using exactly the same steps as before.
+        <center><img class="articleImage" src="/documentation/merge1.png">
+            <br><span class="articleCaption">the greyed-out track in the middle is what i've been using to mark my working area on the top track, taking advantage of audacity's selection snapping features.</span></center>
+            <br>"Toast" is a larger image (<a class="hovernote" title="This is the resolution of the copy I had saved to my computer. The original image is 800x586. I have no idea why I didn't download it in full resolution in the first place, but regardless, I probably would have scaled it down a little anyway to keep the .bmp a reasonable size. toast-0.bmp is already 20 times the size of toast.jpg (879 kb / 47.4 kb)">640x469</a>) which manifests as a longer runtime. In order to merge it with "Female", I'm going to select an area of "Toast" equal in length to the working area of "Female", and replace the rest of the track with silence.
+            <center><br><img class="articleImage" src="/documentation/merge2.png"></center>
+            <br>Then, click and drag to select the entirety of <i>both</i> tracks. Select Tracks > Mix > Mix and Render...
+            <center><br><img class="articleImage" src="/documentation/merge3.png"></center>
+            <br>And it will, as promised, combine the two tracks into one.
+            <center><br><img class="articleImage" src="/documentation/merge4.png"></center>
+            <br>Export this new track just like the others, and now I have a beautiful Toast-Female hybrid:
+            <center><br><img class="articleImage" src="/documentation/mix-1.bmp"></center>
+            <br>Well, okay, it clearly got most of its genes from "Female", but you can see the ghostly edges of "Toast" floating over either side of her face. This is a straightforward total merge. You can also clip small segments of the second image to merge with the first, for a less "all-encompassing" result.
+            <center><br><img class="articleImage" src="/documentation/mix-3.bmp"></center>
+            <br>So that's images. But what if we used this audio editing program to edit... audio? You can import a normal audio file and merge it with the image data using the same process (trim to length, mix and render to new track) -- make sure you mix down your audio from stereo to mono before merging it with the image data! Here's the result of merging a section of an .mp3 of <a class ="lightLink" href="https://www.youtube.com/watch?v=TffrE13AXLM">Bacalao - I'm Still Alive</a> into "Female":
+            <center><br><img class="articleImage" src="/documentation/mix-4.bmp"></center>
+            <br>"Alright, Quadriformis Dot Net," you say. "I understand that images can be audio, and that audio can <i>also</i> be audio, so what's left? What else can possibly be audio?" The answer, my friend, is <i>"anything."</i>
+            <br><br>Audacity is a beautiful machine that you can feed basically any computer file into and it will dutifully render it as audio. Using "raw data" import settings, you can put all kinds of stuff into it and get audio that you can then turn into images.
+            <center><br><img class="articleImage" src="/documentation/merge5.png"></center>
+            <br>This is a .kra file of some RPGMaker assets. We can combine it with "Female" as per usual:
+            <center><br><img class="articleImage" src="/documentation/mix-5.bmp"></center>
+            <br><i>Or,</i> if we're feeling a little rebellious, we can cut everything out of "Female" except the very beginning and ending (where the data that tells the computer "this is an image!" is stored) and paste the entirety of windowSkin.kra in between them, which gives us a representation of <i>just</i> the .kra file as an image.
+            <center><br><img class="articleImage" src="/documentation/mix-6.bmp"></center>
+            <br>This is a way to turn raw data into an image using audio as a transitional medium, which I think is cool as fuck. I love playing around with raw data imports and have amassed quite a collection of various file types that turn into different kinds of sounds/images. I will probably make another article all about that kind of stuff eventually.
+        </p>
+
+<h3>SOME FINAL EDITORIALIZING</h3>
+<p>Documenting this stuff was pretty fun, even though it was <a class="hovernote" title="Most of the times, really; between exporting dozens of files from Audacity, pasting them into Google Docs, and then copying the Google Docs information into Visual Studio Code to make the website... I think I've developed a Pavlovian response to seeing file names that include the word female, and that response is a concerning pain in my forearm.">at times</a> extremely tedious. If I were stronger-willed and more computer savvy, I would go even further in mapping out the correlations between waveform and image data -- I'm sure there is some way to algorithmically pin down the exact relationship between the two -- but,,, I'm just here to made weird images, man. This guide is for glitchcore artists, not compsci majors. That said, if you have any insight into the mathematical side of this that you think merits inclusion in this article, don't hesitate to send it my way. It's probably very interesting, I'm just not of the mind to figure it out myself.
+<br><br>I may, at some point in the future, make further explorations into Audacity databending, like testing out plugin effects or trying to bend different file types, but I'm calling it good for now. For the purposes of making glitch art, this covers the fundamentals, and there's only so far rigorous documentation can take you in making cool stuff that doesn't suck to look at. Also, I hope at least a little bit of the mystery of databending persists -- I think it's an essential part of the aesthetic, relying on the inscrutable inner workings of computers to make something distinctly non-human, something humans struggle to accurately replicate or predict... I don't want it to ever be totally solved, even though I think experimenting with it is fascinating. <a class="hovernote" title="Not! It's my website, sucker.">Sorry</a> to get all ideological right at the end of this very long page. I guess my final point is: watch this space for future expansions on databending from the perspective of a guy who knows just enough about computers to know he doesn't actually know fucking anything about computers.
+</ul>
+</p>
+    </div>
+</body>
