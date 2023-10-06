@@ -45,6 +45,11 @@ h4 {
     color: #000;
 }
 
+p {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
 a.darkLink, a.lightLink {
     text-decoration: none;
 }
