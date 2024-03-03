@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'rabbid_highway_sign_iiregular';
+    src: url('/style/rabbidhighwaysignii-webfont.woff2') format('woff2'),
+         url('/style/rabbidhighwaysignii-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    background-color: #000;
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Vollkorn', serif;
+    font-weight: 600;
+    font-size: 48px;
+    padding: 0;
+    margin: 0;
+    text-shadow: 2px 2px #000;
+}
+
+.navbar {
+    background-color: #000;
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+
+.nbTabsCont {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.tab, .tabQ {
+    display: inline-block;
+    color: #fff;
+    border: 4px solid #fff;
+    margin: 10px 4px 0px 4px;
+    padding: 5px 5px 0px 5px;
+    min-width: 10%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'rabbid_highway_sign_iiregular', Helvetica, sans-serif;
+    font-weight: 600;
+    overflow-y: visible;
+    z-index: 9;
+}
+
+.tab:hover {
+    color: #fff;
+    border-color: #fff;
+    overflow-y: visible;
+    animation-name: linkglow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    text-shadow: 2px 4px #000;
+}
+
+.tabQ:hover {
+    color: #000;
+    border-color: #000;
+    overflow-y: visible;;
+    animation-duration: 2s;
+}
+
+@keyframes linkglow {
+    0%   {color:#fff; border-color:#fff;}
+    50%  {color: #ff0; border-color:#ff0;}
+    100% {color:#fff; border-color:#fff;}
+  }
+
+a {
+    text-decoration: none;
+}
+
+.homeMain {
+    background-color: #444;
+    border-top: 4px solid #222;
+    border-bottom: 4px solid #222;
+    z-index: 1;
+    display: block;
+    min-width: 600px;
+    width: auto;
+    min-height: 480px;
+    text-align: justify;
+    padding: 8px;
+}
+
+.galleryImage {
+    width: 100%;
+    text-align: center;
+}
+
+img {
+    display: inline-flex;
+    border: 4px solid #000;
+    margin: 4px;
+}

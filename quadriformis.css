@@ -45,6 +45,12 @@ h4 {
     color: #000;
 }
 
+h5 {
+    font-family: 'Vollkorn', serif;
+    font-size: 20px;
+    text-decoration:underline;
+}
+
 p {
     margin-left: 12px;
     margin-right: 12px;
@@ -75,6 +81,18 @@ a.darkLink:hover {
     font-weight: 600;
     color: #ff0;
 }
+
+a.lightLinkThin {
+    color: #00f;
+    text-decoration: none;
+}
+
+a.lightLinkThin:hover {
+    color: #f00;
+    text-decoration: none;
+}
+
+
 
 .homeSidebar, .homeMain {
     background-color: #eee;
@@ -223,10 +241,26 @@ li {
     max-width: 90%;
 }
 
+.listImage {
+    border: 1px solid #000;
+    max-width: 90%;
+}
+
 .articleCaption {
     color: #666;
     font-size: 12px;
 }
+
+.repoEntryImage {
+    border: none;
+    max-width: 350px;
+}
+
+.repoEntryCaption {
+    color: #000;
+    font-size: 12px;
+}
+
 
 table {
     border: 2px solid #000;

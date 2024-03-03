@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="quadriformis.css"> 
+  <link rel="stylesheet" href="quadriformis2.css"> 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Vollkorn:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"> 
@@ -9,32 +9,38 @@
 <title>QUADRIFORMIS</title>
 </head>
 <body>
-<h1>QUADRIFORMIS</h1>
-<div class="tabBg"></div>
-        <div class="tab"><a class="tabLink" href="/">HOME</a></div>
-        <div class="tab"><a class="tabLink" href="/about">ABOUT</a></div>
-        <div class="tab dropdown">
-            <span>BLOG</span>
-            <div class="dropdownContent" style="min-width:100px;">
-                <ul>
-                    <li>🡢 <a href="/personal" class="darkLink">blogging</a></li>
-                    <li>🡢 <a href="/articles" class="darkLink">articles</a></li>
-                </ul>
-            </div>
+<div class="navbar">
+    <div class="nbTabsCont">
+        <a href="/"><div class="tab">home</div></a>
+        <a href="/about"><div class="tab">about</div></a>
+        <a href="/projects"><div class="tab">projects</div></a>
+        <a href="/funlinks"><div class="tab">fun links</div></a>
+        <div class="tabQ dropdown">
+             OTHER PLACES  <div class="dropdownContent">
+                <a class="ddLink" href="https://haootia.tumblr.com/">TUMBLR</a>  
+                <a class="ddLink" href="https://www.youtube.com/@onewordconvo">YOUTUBE</a>  
+                <a class="ddLink" href="https://onewordconversation.bandcamp.com/">BANDCAMP</a> 
+                <a class="ddLink" href="https://cohost.org/casper">COHOST</a>
+            </div></div>
+           
         </div>
-        <div class="tab"><a class="tabLink unused" title="under construction!">MUSIC</a></div>
-        <div class="tab dropdown"><span>WORKS</span>
-            <div class="dropdownContent" style="min-width:280px;">
-                <ul>
-                    <li>🡢 <a href="/ihie" class="darkLink">immortal hand, immortal eye</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="tab"><a class="tabLink unused" title="under construction!">SHOP</a></div>
-    
+    </div>
+</div>
+
 <div class="homeMain">
-    <h3>random.txt</h3>
-    <br>The quotes at the bottom of the page are picked out of an array of 396 selections from my own Discord messages, dating from approximately January 2020 to present. The array includes mundane messages in addition to exceptional ones. By repeatedly refreshing the page, you can simulate having a conversation with me at a bare minimum standard of fidelity!
+    <h1 style="color:#e64a75">RANDOM.TXT</h1>
+    <p>The quotes at the bottom of the page are randomly drawn from a curated selection of 531 of my Discord messages. By repeatedly refreshing the page, you can simulate having a conversation with me (one where I am disproportionately full of funny nonsequiturs and nothing you say matters.)</p>
+    <p>If you want to put something like this on your own site, you can use this javascript code:</p>
+    <code>var quotes = new Array ("fill this with your text snippets","google javascript array generator to auto-format a bunch of lines of text");
+<br><br>
+var i = Math.floor(999*Math.random())
+<br><br>
+document.getElementById("snippet").innerHTML = (quotes[i]);</code>
+<p>(replace "999" with however many things you put in the array)</p>
+<p>Then put this HTML wherever you want on the website:</p>
+<code>&lt;button class=&quot;quoteGenerator&quot;&gt; &lt;span id=&quot;snippet&quot;&gt; &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt; &lt;/span&gt; &lt;/button&gt;</code>
+<p>(If you inspect-element this site, you may notice that my code doesn't look exactly like this and is actually full of spans and classes with stupid names. This is because I am bad at code.)</p>
+    
 </div>
 <center>
     <br><i><span style="font-family:'Vollkorn',sans-serif;color:#fff;">Casper says...</span></i>
