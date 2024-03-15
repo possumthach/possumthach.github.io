@@ -1,0 +1,269 @@
+@font-face {
+    font-family: 'rabbid_highway_sign_iiregular';
+    src: url('/style/rabbidhighwaysignii-webfont.woff2') format('woff2'),
+         url('/style/rabbidhighwaysignii-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    background-color: #000;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.navbar {
+    background-color: #000;
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+
+.nbTabsCont {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.tab, .tabQ {
+    display: inline-block;
+    color: #fff;
+    border: 4px solid #fff;
+    margin: 10px 4px 0px 4px;
+    padding: 5px 5px 0px 5px;
+    min-width: 10%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'rabbid_highway_sign_iiregular', Helvetica, sans-serif;
+    font-weight: 600;
+    overflow-y: visible;
+    z-index: 9;
+    font-size: 16px;
+}
+
+.tab:hover {
+    color: #fff;
+    border-color: #fff;
+    overflow-y: visible;
+    animation-name: linkglow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    text-shadow: 2px 4px #000;
+}
+
+.tabQ:hover {
+    color: #000;
+    border-color: #000;
+    overflow-y: visible;;
+    animation-duration: 2s;
+}
+
+@keyframes linkglow {
+    0%   {color:#fff; border-color:#fff;}
+    50%  {color: #ff0; border-color:#ff0;}
+    100% {color:#fff; border-color:#fff;}
+  }
+
+a {
+    text-decoration: none;
+}
+
+.homeMain {
+    background-color: #444;
+    border-top: 4px solid #222;
+    border-bottom: 4px solid #222;
+    z-index: 1;
+    display: block;
+    min-width: 600px;
+    width: auto;
+    min-height: 480px;
+    text-align: justify;
+    padding: 8px;
+}
+
+.textCont {
+    display: block;
+    margin: auto;
+    width: 600px;
+    border: 4px solid #000;
+    padding: 12px 0px 12px 16px;
+    background-color: #ddd;
+}
+
+.nextLink {
+    color: #00f;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 86%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    border: none;
+    /* border: 1px solid #800; */
+}
+
+/* names dates times places */
+
+#n2verse1 {
+    width: 300px;
+}
+#n2verse1 td {
+    width: 150px;
+}
+
+#n2verse2 {
+    width: 450px;
+}
+#n2verse2 td {
+    width: 150px;
+}
+
+#n2verse3 {
+    width: 330px;
+}
+#n2verse3 td {
+    width: 165px;
+}
+
+#n2verse4 {
+    width: 330px;
+}
+#n2verse4 td {
+    width: auto;
+}
+
+#n2verse5 {
+    width: 450px;
+}
+#n2verse5 td {
+    width: 225px;
+}
+
+#n2verse6 {
+    width: 330px;
+}
+#n2verse6 td {
+    text-align: right;
+}
+
+#n2verse7 {
+    width: 450px;
+}
+#n2verse7 td {
+    width: 150px;
+}
+
+#n2verse8 {
+    width: 495px;
+}
+#n2verse8 td {
+    width: 165px;
+}
+
+#n2verse9 {
+    width: 400px;
+}
+#n2verse9 td {
+    width: auto;
+    min-width: 80px;
+}
+
+#n2verse10 {
+    width: 350px;
+}
+#n2verse10 td {
+    width: auto;
+    min-width: 150px;
+}
+
+#n2verse11 {
+    width: 400px;
+}
+#n2verse11 td {
+    width: auto;
+    min-width: 80px;
+}
+
+/* rain shadow */
+
+#n3verse1 {
+    width: 400px;
+}
+#n3verse1 td {
+    width: auto;
+    min-width: 60px;
+}
+
+#n3verse2 {
+    width: 400px;
+}
+#n3verse2 td {
+    width: auto;
+    min-width: 20px;
+}
+
+#n3verse3 {
+    width: 360px;
+}
+#n3verse3 td {
+    width: auto;
+    min-width: 36px;
+}
+
+#n3verse4 {
+    width: 400px;
+}
+#n3verse4 td {
+    width: 400px;
+}
+
+#n3verse5 {
+    width: 360px;
+}
+#n3verse5 td {
+    width: auto;
+    min-width: 36px;
+}
+
+#n3verse6 {
+    width: 540px;
+    text-align:center;
+}
+#n3verse6 td {
+    width: 540px;
+}
+
+#n3verse7 {
+    width: 400px;
+}
+#n3verse7 td {
+    width: auto;
+    min-width: 36px;
+}
+
+/* inventor */
+
+#n4verse1 {
+    width: 400px;
+}
+#n4verse1 td {
+    width: auto;
+    font-size: 24px;
+}
+
+/* font sizes */
+td.font16 {
+    font-size: 16px;
+}
+td.font20 {
+    font-size: 20px;
+}
+td.font24 {
+    font-size: 24px;
+}
