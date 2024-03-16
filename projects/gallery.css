@@ -77,6 +77,12 @@ h1 {
 
 a {
     text-decoration: none;
+    color: #118;
+    font-weight: bold;
+}
+
+a:hover {
+    color:#ff0;
 }
 
 .homeMain {
