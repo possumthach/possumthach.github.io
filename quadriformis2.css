@@ -376,6 +376,13 @@ code {
 table {
     border: 2px solid #000;
 }
+
+table.p2tt {
+    width: 90%;
+    max-width: 1400px;
+    font-size: 22px;
+}
+
 table.article6Cell, table.article2Cell, table.article4Cell, table.articleDoubleCell {
     width: 90%;
 }
@@ -390,6 +397,31 @@ table.article6CellB {
 }
 td {
     border: 1px solid #000;
-    width: 30%;
     text-align: center;
+}
+
+.catrinityType {
+    font-family: 'Catrinity', Arial, sans-serif;
+    font-size:larger;
+}
+.imageWashed {
+    filter: grayscale(100%);
+}
+
+.blockquote {
+    margin-left: 6%;
+    width: 90%;
+    padding: 6px;
+    border-left: 6px solid #555;
+    background-color: #ddd;
+}
+
+.tocLink {
+    font-weight: normal;
+    color: #000;
+    text-decoration: underline;
+}
+
+.tocLink:hover {
+    color: #c33368;
 }
