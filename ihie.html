@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>IH, IE.</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="/style/ihieLander.css">
+        <link rel="icon" type="image/x-icon" href="/icon2.ico"> 
+
+	</head>
+
+	<body>
+        <canvas id="canvas2" style="display:block;"></canvas>
+        <div class="trailer"><span style="font-size:64pt;line-height:60pt;font-family: 'Hussar', Helvetica, sans-serif;min-width:800px;">IMMORTAL HAND,<br>IMMORTAL EYE</span><br>is a story about <span id="textCycle" onclick="clickFade();changeText();">things that are hard to<br>describe in one sentence...</span><br><br><p style="color:#fff;max-width:1200px;">it is being made by one person on a budget of zero dollars. it's hard, but we're having a lot of fun learning as we go. further details regarding "development schedule" are not yet available.</p></div>
+        <script>
+
+var words = ["stories.<br>","memories.<br>","personhood.<br>","the internet.<br>","consciousness.<br>","truth.<br>","happiness.<br>","reality hacking.<br>","time.<br>","graphic design.<br>","ordinary people.<br>","death.<br>","misunderstanding things<br>on purpose.","standards of evidence.<br>","secrets.<br>","names.<br>","inevitability.<br>","loopholes.<br>","the observer effect.<br>","epistemology.<br>","self-fulfilling prophecies.<br>","dreams.<br>"];
+var i = 0;
+var text = "This text changes";
+var cycler = document.getElementById("textCycle");
+
+function clickFade() {
+  cycler.classList.add("faded");
+}
+
+function getChangedText() {
+    i = (i + 1) % words.length;
+    return text.replace(/This text changes/, words[i]);
+}
+
+function changeText() {
+    var newText = getChangedText();
+    document.getElementById("textCycle").innerHTML = newText;
+}
+
+var canvas = document.querySelector("#canvas2");
+var context = canvas.getContext("2d");
+context.canvas.width  = window.innerWidth;
+context.canvas.height = window.innerHeight;
+var canvasPos = getPosition(canvas);
+var mouseX = 0;
+var mouseY = 0;
+
+var horzBaseline = canvas.height*10/107;
+var vertBaselineA = canvas.width/4;
+var vertBaselineB = canvas.width/2+canvas.width/4;
+var horzTopline = horzBaseline-eyeSize*2;
+var horzLowline = horzBaseline+eyeSize*2;
+var ellipseWidth = canvas.width/5;
+var ellipseHeight = canvas.width/6;
+var eyeSize = canvas.width/20;
+
+var ultPosXa = vertBaselineA;
+var ultPosYa = horzBaseline;
+var ultPosXb = vertBaselineB;
+var ultPosYb = horzBaseline;
+var nowPosXa = vertBaselineA;
+var nowPosYa = horzBaseline;
+var nowPosXb = vertBaselineB;
+var nowPosYb = horzBaseline;
+var eyeReturn = false;
+var firstMove = true;
+
+const eyeTimer = setTimeout(returnEyes, 3500);
+ 
+const clampNumber = (num, a, b) =>
+  Math.max(Math.min(num, Math.max(a, b)), Math.min(a, b));
+
+canvas.addEventListener("mousemove", setMousePosition, false);
+
+function setMousePosition(e) {
+    clearTimeout(eyeTimer);
+    eyeReturn = false;
+    mouseX = e.clientX - canvasPos.x;
+    mouseY = e.clientY - canvasPos.y;
+    if (firstMove) {
+        const eyeTimer = setTimeout(returnEyes, 2500);
+        firstMove = false;
+    }
+    return;
+}
+
+function returnEyes() {
+    eyeReturn = true;
+    console.log('balaaalal');
+    firstMove = true;
+    return;
+}
+
+function update() {
+  context.canvas.width  = window.innerWidth;
+  context.canvas.height = window.innerHeight;
+    horzBaseline = canvas.height*10/107+100;
+    vertBaselineA = canvas.width/4;
+    vertBaselineB = canvas.width/2+canvas.width/4;
+    horzTopline = horzBaseline-eyeSize*2;
+    horzLowline = horzBaseline+eyeSize*2;
+    ellipseWidth = canvas.width/5;
+    ellipseHeight = canvas.width/6;
+    eyeSize = canvas.width/20;
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.beginPath();
+    context.moveTo(canvas.width/2, 0);
+    context.lineTo(canvas.width/2, canvas.height);
+  context.closePath();
+  context.stroke();
+  context.beginPath();
+    context.moveTo(0, canvas.height/2);
+    context.lineTo(canvas.width, canvas.height/2);
+  context.closePath();
+  context.stroke();
+  context.beginPath();
+    context.moveTo(0, horzBaseline);
+    context.lineTo(canvas.width, horzBaseline);
+  context.closePath();
+  context.stroke();
+  context.beginPath();
+    context.moveTo(0, horzTopline);
+    context.lineTo(canvas.width, horzTopline);
+  context.closePath();
+  context.stroke();
+  context.beginPath();
+    context.moveTo(0, horzLowline);
+    context.lineTo(canvas.width, horzLowline);
+  context.closePath();
+  context.stroke();
+
+  context.strokeStyle = "#ee0000";
+  context.lineWidth = eyeSize/2;
+  context.lineCap = "round";
+
+  context.beginPath();
+  context.ellipse(vertBaselineA, horzBaseline+(ellipseHeight/2), ellipseWidth, ellipseHeight, 0, 7 * Math.PI / 6, 11 * Math.PI / 6);
+  context.stroke();
+  context.beginPath();
+  context.ellipse(vertBaselineA, horzBaseline-(ellipseHeight/2), ellipseWidth, ellipseHeight, Math.PI, 7 * Math.PI / 6, 11 * Math.PI / 6);
+  context.stroke();
+  context.beginPath();
+  context.ellipse(vertBaselineB, horzBaseline+(ellipseHeight/2), ellipseWidth, ellipseHeight, 0, 7 * Math.PI / 6, 11 * Math.PI / 6);
+  context.stroke();
+  context.beginPath();
+  context.ellipse(vertBaselineB, horzBaseline-(ellipseHeight/2), ellipseWidth, ellipseHeight, Math.PI, 7 * Math.PI / 6, 11 * Math.PI / 6);
+  context.stroke();
+  
+    var clampedXa = clampNumber(mouseX,canvas.width/10,canvas.width/10+canvas.width/2-canvas.width/5);
+    var clampedYa = clampNumber(mouseY,horzTopline+eyeSize,horzLowline-eyeSize);
+    var clampedXb = clampNumber(mouseX,canvas.width/2+canvas.width/10,canvas.width/2+canvas.width/10+canvas.width/2-canvas.width/5);
+    var clampedYb = clampNumber(mouseY,horzTopline+eyeSize,horzLowline-eyeSize);
+
+    if (eyeReturn) {
+        ultPosXa = vertBaselineA/10+nowPosXa*9/10;
+        ultPosYa = horzBaseline/10+nowPosYa*9/10;
+        ultPosXb = vertBaselineB/10+nowPosXb*9/10;
+        ultPosYb = horzBaseline/10+nowPosYb*9/10;
+        nowPosXa = ultPosXa;
+        nowPosYa = ultPosYa;
+        nowPosXb = ultPosXb;
+        nowPosYb = ultPosYb;
+    } else {
+        ultPosXa = (canvas.width/8+clampedXa/2)/20+nowPosXa*19/20;
+        ultPosYa = clampedYa;
+        ultPosXb = ((vertBaselineB)/2+clampedXb/2)/20+nowPosXb*19/20;
+        ultPosYb = clampedYb;
+        nowPosXa = ultPosXa;
+        nowPosYa = ultPosYa;
+        nowPosXb = ultPosXb;
+        nowPosYb = ultPosYb;
+    }
+
+  context.beginPath();
+  context.arc(ultPosXa, ultPosYa, canvas.width/20, 180, 2 * Math.PI, true);
+  context.fillStyle = "#ee0000";
+  context.fill();
+  context.beginPath();
+  context.arc(ultPosXb, ultPosYb, canvas.width/20, 180, 2 * Math.PI, true);
+  context.fillStyle = "#ee0000";
+  context.fill();
+
+  context.beginPath();
+  context.ellipse(vertBaselineA, horzBaseline-(ellipseHeight/2)+eyeSize/2, ellipseWidth+eyeSize/4, ellipseHeight, Math.PI, 0, 2 * Math.PI);
+  context.strokeStyle = "#000";
+  context.stroke();
+  context.beginPath();
+  context.ellipse(vertBaselineA, horzBaseline+(ellipseHeight/2)-eyeSize/2, ellipseWidth+eyeSize/4, ellipseHeight, Math.PI, 0, 2 * Math.PI);
+  context.strokeStyle = "#000";
+  context.stroke();
+  context.beginPath();
+  context.ellipse(vertBaselineB, horzBaseline-(ellipseHeight/2)+eyeSize/2, ellipseWidth+eyeSize/4, ellipseHeight, Math.PI, 0, 2 * Math.PI);
+  context.strokeStyle = "#000";
+  context.stroke();
+  context.beginPath();
+  context.ellipse(vertBaselineB, horzBaseline+(ellipseHeight/2)-eyeSize/2, ellipseWidth+eyeSize/4, ellipseHeight, Math.PI, 0, 2 * Math.PI);
+  context.strokeStyle = "#000";
+  context.stroke();
+  
+  requestAnimationFrame(update);
+  return;
+}
+
+update();
+
+function getPosition(el) {
+  var xPosition = 0;
+  var yPosition = 0;
+ 
+  while (el) {
+    xPosition += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+    yPosition += (el.offsetTop - el.scrollTop + el.clientTop);
+    el = el.offsetParent;
+  }
+  return {
+    x: xPosition,
+    y: yPosition
+  };
+}  
+        </script>
+
+
+    </body>
+</html>
