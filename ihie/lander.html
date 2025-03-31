@@ -6,33 +6,28 @@
 
 		<title>IH, IE.</title>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="/style/ihieLander.css">
+		<link rel="stylesheet" href="lander.css">
         <link rel="icon" type="image/x-icon" href="/icon2.ico"> 
 
 	</head>
 
 	<body>
         <canvas id="canvas2" style="display:block;"></canvas>
-        <div class="trailer"><span style="font-size:64pt;line-height:60pt;font-family: 'Hussar', Helvetica, sans-serif;min-width:800px;">IMMORTAL HAND,<br>IMMORTAL EYE</span><br>is a story about <span id="textCycle" onclick="clickFade();changeText();">things that are hard to<br>describe in one sentence...</span><br><br><p style="color:#fff;max-width:1200px;">it is being made by one person on a budget of zero dollars. it's hard, but we're having a lot of fun learning as we go. further details regarding "development schedule" are not yet available.</p></div>
+        <div id="trailer" onwheel="enablePE()" onmousemove="disablePE()"><span id="bigTitle">IMMORTAL HAND,<br>IMMORTAL EYE</span><br>is a story about things that don't want to be understood and the people trying to understand them anyway.
+        <br><p style="color:#fff">
+        it is an interactive multimedia hypernovel comprised mainly of text and music. a free preview of the first "chapter" will be released... sometime soonish.....
+    <br>until then, <a href="/ihie/devlog1" style="color:#e00;pointer-events: auto;">here's a devlog.</a></p></div>
+          
         <script>
 
-var words = ["stories.<br>","memories.<br>","personhood.<br>","the internet.<br>","consciousness.<br>","truth.<br>","happiness.<br>","reality hacking.<br>","time.<br>","graphic design.<br>","ordinary people.<br>","death.<br>","misunderstanding things<br>on purpose.","standards of evidence.<br>","secrets.<br>","names.<br>","inevitability.<br>","loopholes.<br>","the observer effect.<br>","epistemology.<br>","self-fulfilling prophecies.<br>","dreams.<br>"];
-var i = 0;
-var text = "This text changes";
-var cycler = document.getElementById("textCycle");
+addEventListener("wheel", enablePE);
+addEventListener("mousemove", disablePE);
 
-function clickFade() {
-  cycler.classList.add("faded");
+function enablePE() {
+  document.getElementById("trailer").classList.remove("noEvents");
 }
-
-function getChangedText() {
-    i = (i + 1) % words.length;
-    return text.replace(/This text changes/, words[i]);
-}
-
-function changeText() {
-    var newText = getChangedText();
-    document.getElementById("textCycle").innerHTML = newText;
+function disablePE() {
+  document.getElementById("trailer").classList.add("noEvents");
 }
 
 var canvas = document.querySelector("#canvas2");
@@ -69,9 +64,10 @@ const clampNumber = (num, a, b) =>
   Math.max(Math.min(num, Math.max(a, b)), Math.min(a, b));
 
 canvas.addEventListener("mousemove", setMousePosition, false);
+canvas.addEventListener("wheel", returnEyes, false);
 
 function setMousePosition(e) {
-    clearTimeout(eyeTimer);
+    clearTimeout(1);
     eyeReturn = false;
     mouseX = e.clientX - canvasPos.x;
     mouseY = e.clientY - canvasPos.y;
@@ -83,8 +79,8 @@ function setMousePosition(e) {
 }
 
 function returnEyes() {
+  document.getElementById("trailer").classList.remove("noEvents");
     eyeReturn = true;
-    console.log('balaaalal');
     firstMove = true;
     return;
 }

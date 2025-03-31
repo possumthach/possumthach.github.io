@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>IH, IE.</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="gen.css">
+        <link rel="icon" type="image/x-icon" href="/icon2.ico"> 
+
+	</head>
+
+	<body>
+   <div id="blog">
+    <h1>IMMORTAL HAND,<br>IMMORTAL EYE</h1>
+    <h2>Devlog 1: The Invisible Maze</h2>
+    <p>This is the first of an unknown number of blogs about the creation of Immortal Hand, Immortal Eye, my work-in-progress artistic endeavor that I eternally struggle to explain to other people.</p>
+    <p>IHIE is, in the most efficient way I know how to describe it, interactive fiction. Anyone who knows anything about interactive fiction knows about Twine. Twine is <i>the</i> engine for interactive fiction. It's open source, it's well-documented, it's made some <a href="https://en.wikipedia.org/wiki/Depression_Quest">famous stuff</a> and some <a href="https://en.wikipedia.org/wiki/With_Those_We_Love_Alive">not-as-famous stuff that I like better.</a> So when I started really putting finger to keyboard and developing IHIE, I immediately went to Twine. And then I immediately encountered some problems.</p>
+    <p>Twine comprises a couple of sub-engines — vassal states under the Twine halidom — so while authors might bicker about Harlowe versus SugarCube, the general population calls all of its products "Twine games." But in all configurations, Twine comes with its own built-in CSS rules. I <i>hate</i> this.</p>
+    <p>The first thing to ever motivate me to learn HTML/CSS was a desire to make cool custom userpages for petsites, on Neopets and Rescreatu and Lioden, and every time, I would run up against the same infuriating wall: I couldn't just start from scratch. Whatever I wrote was getting applied <i>on top of</i> the existing site styles, so while it was easy to change the colors of text and links, <i>fuck me</i> if I wanted to stretch my legs a little further. Everything was a mess of IDs and classes with no documentation anywhere, and I had to poke through the element inspector for hours to slap together my own.</p>
+    <p>This is the invisible maze: walls everywhere, and no way to figure them out but by trial and error. I'd been dealing with it for near on thirteen years by the time IHIE was ready to crawl out of my head and into the physical world, and I was <i>tired of it.</i> The fact that Twine wouldn't let me start with a blank page was an immediate frustration; I could have worked around this, maybe, by brute-forcing a bunch of !important clauses onto the defaults, but then I also ran swiftly into problems with the programming.</p>
+    <p>Twine's general ethos is to play to the author-not-programmer, the person who just wants to <i>write</i> and is scared to death of any code more complicated than a markup language. And that's fine! As someone who now "knows a programming language," I am qualified to say: knowing a programming language does not make you particularly cool or intelligent, and it certainly doesn't make you better than anyone else. I don't think you should <i>have to</i> know how to code in order to make interactive fiction — but I would like to have the <i>option</i> to. And there were non-negotiable parts of IHIE's design that I just couldn't make with Twine's tools. Chiefly, the music.</p>
+    <p>Twine's musical capabilities are limited, and basically just exist to let you have a looping background track or incidental sound effects. IHIE, however, is a nonlinear concept album, where story progression affects which tracks play when and where; the music isn't tied to each page, necessarily, but some pages have specific associated songs that will get mixed into the playlist once you've visited them, or start playing immediately if they're particularly important. Otherwise, the music system will choose from a pool of atmosphere-relevant backgrounders. In order to do this in Twine, I would have had to download a js library dedicated to handling audio, and then fiddle with even more already-written rules to get it to do exactly what I wanted. At which point — why am I even doing this in Twine at all? If I have to write from scratch, I can at least do it <i>actually from scratch,</i> not over a bunch of other people's shit I had to erase first.</p>
+    <p>So I said my goodbyes and left Twine behind. I considered some other engines that would let me work more closely with Javascript while still providing <i>some</i> backbone, like Iffinity and Monogatari, but ultimately, I'm just more comfortable working without them. Straight-up Javascript is better documented than anything else could ever be, like, tautologically, so when I do run into problems — which is often, because I'm bad at code — I don't have to deal with the invisible maze. MDN has maps on file, baby.</p>
+    <p>If you want a moral to take away from this, I guess my advice is that the best way to learn is to have something you <i>want.</i> Tutorials and lesson plans that have you drawing circles or whatever might boast about "learning by doing," but there's no doing like doing <i>for reals.</i> Just fuckin' go for it! Start making your big ideas now! Make something you actually care about, and you'll learn what's necessary to do it along the way.</p>
+    </div>
+
+
+    </body>
+</html>
