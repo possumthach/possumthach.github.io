@@ -52,3 +52,20 @@ a {
 a:hover {
     color: #e00;
 }
+
+.blockquote {
+    margin-left: 6%;
+    width: 90%;
+    padding: 6px;
+    border-left: 6px solid #555;
+    background-color: #222;
+}
+.tocLink {
+    font-weight: normal;
+    text-decoration: underline;
+}
+.articleCaption {
+    color: #666;
+    font-size: 14pt;
+    text-align: center;
+}
