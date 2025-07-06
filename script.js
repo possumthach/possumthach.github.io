@@ -5,8 +5,9 @@ window.addEventListener("load", (event) => {
             <a href="/projects"><div class="tab">projects</div></a>
             <a href="/funlinks"><div class="tab">fun links</div></a>
             <div class="tabQ dropdown">
-                <span style="margin:auto;">SHOP</span> <div class="dropdownContent">
-                    <a class="ddLink" href="https://www.redbubble.com/people/Quadriformis/shop?asc=u"> REDBUBBLE</a><a class="ddLink" href="/products"> MORE INFO</a>
+                <span style="margin:auto;">MONEY</span> <div class="dropdownContent">
+                    <a class="ddLink" href="https://ko-fi.com/selfsame"> KO-FI</a>
+                    <a class="ddLink" href="https://www.redbubble.com/people/Quadriformis/shop?asc=u"> REDBUBBLE</a>
                 </div></div>
             <div class="tabQ dropdown">
                 <span style="margin:auto;">OTHER PLACES</span> <div class="dropdownContent">
@@ -14,5 +15,6 @@ window.addEventListener("load", (event) => {
                     <a class="ddLink" href="https://www.youtube.com/@onewordconvo">YOUTUBE</a>  
                     <a class="ddLink" href="https://onewordconversation.bandcamp.com/">BANDCAMP</a> 
                 </div></div>
+            <a href="/rss.xml"><div class="tab">rss</div></a>
         </div>`
   });
