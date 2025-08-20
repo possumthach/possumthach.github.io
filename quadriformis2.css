@@ -74,6 +74,10 @@ h5 {
     text-decoration:underline;
 }
 
+ul {
+    text-align: left;
+}
+
 .navbar {
     background-image: linear-gradient(to right, #af2457, #b92c5f, #c33368, #cd3b70, #d74279, #e64a75, #f35471, #ff5f6c, #ff7657, #ff923f, #ffb026, #fccf10);
     display: block;
