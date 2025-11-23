@@ -46,6 +46,15 @@ p {
     text-align: justify;
     font-size: 17pt;
 }
+ol > li {
+    color: #fff;
+    font-family: Verdana, sans-serif;
+    font-size: 17pt;
+}
+sup {
+    color: #888;
+    font-size: smaller;
+}
 a {
     color: #ff0;
 }
@@ -68,4 +77,7 @@ a:hover {
     color: #666;
     font-size: 14pt;
     text-align: center;
+}
+.fakeCode {
+    font-family: 'Courier New', Courier, monospace;
 }
