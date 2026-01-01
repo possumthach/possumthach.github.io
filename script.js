@@ -11,7 +11,7 @@ window.addEventListener("load", (event) => {
                 </div></div>
             <div class="tabQ dropdown">
                 <span style="margin:auto;">OTHER PLACES</span> <div class="dropdownContent">
-                    <a class="ddLink" href="https://spikehunter.tumblr.com/"> TUMBLR</a>  
+                    <a class="ddLink" href="https://karvina.tumblr.com/"> TUMBLR</a>  
                     <a class="ddLink" href="https://www.youtube.com/@onewordconvo">YOUTUBE</a>  
                     <a class="ddLink" href="https://onewordconversation.bandcamp.com/">BANDCAMP</a> 
                 </div></div>
